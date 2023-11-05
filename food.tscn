@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxmdb7t0o1p7d"]
+
+[ext_resource type="Script" path="res://food.gd" id="1_3xrvu"]
+[ext_resource type="Texture2D" uid="uid://cw4efof4t1oop" path="res://food.png" id="1_88qen"]
+
+[node name="Food" type="Node2D"]
+script = ExtResource("1_3xrvu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_88qen")
+centered = false
