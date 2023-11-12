@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://cceppt7da6x3v"]
+
+[ext_resource type="Script" path="res://scenes/levels/level1/dickinsonia.gd" id="1_4igrk"]
+[ext_resource type="Texture2D" uid="uid://cf2knnkyjthpc" path="res://assets/sprites/diskinsonia/dickinsonia1.png" id="1_rhnth"]
+[ext_resource type="Texture2D" uid="uid://b0p8ihepyg18i" path="res://assets/sprites/diskinsonia/dickinsonia2.png" id="2_e7pop"]
+[ext_resource type="Texture2D" uid="uid://j7vaa7n1t7un" path="res://assets/sprites/diskinsonia/dickinsonia3.png" id="3_gmfw5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3dxcg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rhnth")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rhnth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gmfw5")
+}],
+"loop": true,
+"name": &"right",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rhnth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e7pop")
+}],
+"loop": true,
+"name": &"up",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rxeow"]
+radius = 53.0
+height = 166.0
+
+[node name="Dickinsonia" type="CharacterBody2D"]
+position = Vector2(2, 0)
+collision_layer = 2
+script = ExtResource("1_4igrk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3dxcg")
+animation = &"up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_rxeow")
