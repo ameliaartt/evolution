@@ -39,8 +39,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rxeow"]
-radius = 53.0
-height = 166.0
+radius = 68.0
+height = 258.0
 
 [node name="Dickinsonia" type="CharacterBody2D"]
 position = Vector2(2, 0)
@@ -48,6 +48,8 @@ collision_layer = 2
 script = ExtResource("1_4igrk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, 7)
+scale = Vector2(1.41732, 1.37917)
 sprite_frames = SubResource("SpriteFrames_3dxcg")
 animation = &"up"
 
