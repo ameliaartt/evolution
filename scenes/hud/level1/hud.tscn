@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4exo1t5uhbxh"]
 
 [ext_resource type="Script" path="res://scenes/hud/level1/hud.gd" id="1_t8t1u"]
-[ext_resource type="FontFile" uid="uid://p6heyoqcm06u" path="res://assets/fonts/videotype.ttf" id="2_8kaou"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_gsf3p"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_t8t1u")
@@ -16,7 +16,7 @@ offset_bottom = 81.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 16
-theme_override_fonts/font = ExtResource("2_8kaou")
+theme_override_fonts/font = ExtResource("2_gsf3p")
 theme_override_font_sizes/font_size = 64
 text = "Еда: "
 
@@ -24,24 +24,26 @@ text = "Еда: "
 wait_time = 0.25
 
 [node name="LevelCompleteLabel" type="Label" parent="."]
-offset_left = 176.0
-offset_top = 272.0
-offset_right = 1770.0
-offset_bottom = 354.0
+offset_left = -1.0
+offset_top = 215.0
+offset_right = 1922.0
+offset_bottom = 458.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 16
-theme_override_fonts/font = ExtResource("2_8kaou")
+theme_override_fonts/font = ExtResource("2_gsf3p")
 theme_override_font_sizes/font_size = 64
 text = "Вы выполнили задание.
-Для перехода на следующий уровень подойдите к камню."
+Для перехода на следующий уровень 
+подойдите к камню."
+horizontal_alignment = 1
 
 [node name="HideButton" type="Button" parent="."]
 offset_left = 568.0
 offset_top = 592.0
 offset_right = 1354.0
 offset_bottom = 809.0
-theme_override_fonts/font = ExtResource("2_8kaou")
+theme_override_fonts/font = ExtResource("2_gsf3p")
 theme_override_font_sizes/font_size = 36
 text = "Закончить уровень"
 

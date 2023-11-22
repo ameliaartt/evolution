@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c8pk28yk4tkfg"
-path="res://.godot/imported/TerminusTTF-Bold-4.49.3.ttf-36f66fbe387c3d5d13ddc3db16e5c796.fontdata"
+uid="uid://c15qulsl5wbmb"
+path="res://.godot/imported/RussoOne-Regular.ttf-6dfa1e4f3354d5ba40d0775191309a1f.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/TerminusTTF-Bold-4.49.3.ttf"
-dest_files=["res://.godot/imported/TerminusTTF-Bold-4.49.3.ttf-36f66fbe387c3d5d13ddc3db16e5c796.fontdata"]
+source_file="res://assets/fonts/RussoOne-Regular.ttf"
+dest_files=["res://.godot/imported/RussoOne-Regular.ttf-6dfa1e4f3354d5ba40d0775191309a1f.fontdata"]
 
 [params]
 
