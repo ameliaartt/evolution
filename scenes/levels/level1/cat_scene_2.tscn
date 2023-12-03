@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpmygkp6a18oo"]
+
+[ext_resource type="Script" path="res://scenes/levels/level1/cat_scene_2.gd" id="1_6j8ja"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_b2mqp"]
+[ext_resource type="Texture2D" uid="uid://5gdq1u87x67k" path="res://assets/sprites/catscene/old_creature_diet_7-750x499.jpg" id="2_w3ob7"]
+
+[node name="cat_scene2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6j8ja")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 564.0
+offset_right = 1182.0
+offset_bottom = 625.0
+theme_override_fonts/font = ExtResource("1_b2mqp")
+theme_override_font_sizes/font_size = 50
+text = "Эдиакарская биота"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 649.0
+offset_right = 1842.0
+offset_bottom = 810.0
+theme_override_fonts/font = ExtResource("1_b2mqp")
+theme_override_font_sizes/font_size = 31
+text = "Все эдиакарские живые существа обитали в море, суша ещё оставалась безжизненной. Большинство из них
+резко отличаются ото всех других ныне известных живых существ и представляют собой мягкотелые, в
+основном сидячие организмы, имеющие трубчатую структуру. Эдиакарские организмы представляют собой
+первую достоверно подтверждённую фауну многоклеточных животных "
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 862.0
+offset_right = 1167.0
+offset_bottom = 961.0
+theme_override_fonts/font = ExtResource("1_b2mqp")
+theme_override_font_sizes/font_size = 25
+text = "На следующий уровень"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(918, 309)
+scale = Vector2(1.078, 0.924349)
+texture = ExtResource("2_w3ob7")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
