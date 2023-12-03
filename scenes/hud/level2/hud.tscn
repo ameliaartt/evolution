@@ -1,12 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0dqgdwec8gxv"]
 
-[ext_resource type="Script" path="res://scenes/hud/level1/hud.gd" id="1_amlh2"]
+[ext_resource type="Script" path="res://scenes/hud/level2/hud.gd" id="1_1td6w"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_sn6k4"]
 
 [node name="HUD" type="CanvasLayer"]
-script = ExtResource("1_amlh2")
-font_update_color = Color(1, 0.937255, 0, 1)
-font_normal_color = Color(1, 1, 1, 1)
+script = ExtResource("1_1td6w")
 
 [node name="FoodLabel" type="Label" parent="."]
 offset_left = 16.0
