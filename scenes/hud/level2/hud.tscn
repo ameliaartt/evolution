@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0dqgdwec8gxv"]
+
+[ext_resource type="Script" path="res://scenes/hud/level1/hud.gd" id="1_amlh2"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_sn6k4"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_amlh2")
+font_update_color = Color(1, 0.937255, 0, 1)
+font_normal_color = Color(1, 1, 1, 1)
+
+[node name="FoodLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = -1.0
+offset_right = 230.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_sn6k4")
+theme_override_font_sizes/font_size = 64
+text = "Еда: "
+
+[node name="FoodLabelUpdateTimer" type="Timer" parent="FoodLabel"]
+wait_time = 0.25
+
+[node name="LevelCompleteLabel" type="Label" parent="."]
+offset_left = -1.0
+offset_top = 215.0
+offset_right = 1922.0
+offset_bottom = 458.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_sn6k4")
+theme_override_font_sizes/font_size = 64
+text = "Вы выполнили задание.
+Счёт: "
+horizontal_alignment = 1
+
+[node name="HideButton" type="Button" parent="."]
+offset_left = 568.0
+offset_top = 592.0
+offset_right = 1354.0
+offset_bottom = 809.0
+theme_override_fonts/font = ExtResource("2_sn6k4")
+theme_override_font_sizes/font_size = 36
+text = "Закончить уровень"
+
+[connection signal="timeout" from="FoodLabel/FoodLabelUpdateTimer" to="." method="_on_food_label_update_timer_timeout"]
+[connection signal="pressed" from="HideButton" to="." method="_on_hide_button_pressed"]

@@ -18,11 +18,8 @@ func _ready():
 	$LevelCompleteLabel.set("visible_characters", 0)
 	$HideButton.visible = false
 	
-func show_level_complete_hud(food_count):
+func show_level_complete_hud():
 	$LevelCompleteLabel.set("visible_characters", -1)
-	$HideButton.visible = true
-	$LevelCompleteLabel.text = "Вы выполнили задание.
-Счёт: " + str(food_count)
 
 func _on_hide_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level1/cat_scene_2.tscn")

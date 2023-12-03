@@ -43,7 +43,6 @@ func spawn_food():
 		$Items.add_child(food)
 		food.player_ate.connect(delete_food.bind(food))
 
-	
 func _ready():
 	spawn_food()
 
