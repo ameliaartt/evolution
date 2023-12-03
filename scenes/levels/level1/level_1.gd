@@ -6,8 +6,10 @@ var is_in_rock_area = false
 
 func rock_entered():
 	is_in_rock_area = true
+	rock_update()
 func rock_exited():
 	is_in_rock_area = false
+	rock_update()
 	$HUD/HideButton.visible = false
 func rock_update():
 	if is_in_rock_area && $Dickinsonia.food_count == 3:
