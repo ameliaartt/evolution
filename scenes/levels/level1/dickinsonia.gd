@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-@export var speed = 200.0
-@export var accel = 200
+@export var speed = 400.0
+@export var accel = 400
 @export var friction = 600
 
 var food_count: int = 0

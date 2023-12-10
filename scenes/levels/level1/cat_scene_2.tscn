@@ -34,12 +34,12 @@ text = "Эдиакарская биота"
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 58.0
+offset_left = 18.0
 offset_top = 649.0
-offset_right = 1842.0
-offset_bottom = 810.0
+offset_right = 1908.0
+offset_bottom = 822.0
 theme_override_fonts/font = ExtResource("1_b2mqp")
-theme_override_font_sizes/font_size = 31
+theme_override_font_sizes/font_size = 33
 text = "Все эдиакарские живые существа обитали в море, суша ещё оставалась безжизненной. Большинство из них
 резко отличаются ото всех других ныне известных живых существ и представляют собой мягкотелые, в
 основном сидячие организмы, имеющие трубчатую структуру. Эдиакарские организмы представляют собой
