@@ -1,10 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0dqgdwec8gxv"]
+[gd_scene load_steps=7 format=3 uid="uid://b0dqgdwec8gxv"]
 
 [ext_resource type="Script" path="res://scenes/hud/level2/hud.gd" id="1_1td6w"]
+[ext_resource type="Texture2D" uid="uid://b8c2kuno0lylu" path="res://assets/sprites/details/green_sliderUp.png" id="2_ido6m"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_sn6k4"]
+[ext_resource type="Texture2D" uid="uid://bwdvqaggn5pe4" path="res://assets/sprites/details/green_sliderDown.png" id="3_84ej7"]
+[ext_resource type="Texture2D" uid="uid://bdvx548v0273e" path="res://assets/sprites/details/green_sliderLeft.png" id="4_pghkm"]
+[ext_resource type="Texture2D" uid="uid://cqekng5okbuky" path="res://assets/sprites/details/green_sliderRight.png" id="5_nb1iw"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_1td6w")
+
+[node name="up" type="TouchScreenButton" parent="."]
+position = Vector2(1675, 756)
+scale = Vector2(1.53571, 1.45238)
+texture_normal = ExtResource("2_ido6m")
+action = "up"
+visibility_mode = 1
+
+[node name="down" type="TouchScreenButton" parent="."]
+position = Vector2(1676, 884)
+scale = Vector2(1.60715, 1.38095)
+texture_normal = ExtResource("3_84ej7")
+action = "down"
+visibility_mode = 1
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2(1602, 828)
+scale = Vector2(1.41026, 1.48387)
+texture_normal = ExtResource("4_pghkm")
+action = "left"
+visibility_mode = 1
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2(1735, 827)
+scale = Vector2(1.58974, 1.48387)
+texture_normal = ExtResource("5_nb1iw")
+action = "right"
+visibility_mode = 1
 
 [node name="FoodLabel" type="Label" parent="."]
 offset_left = 16.0
