@@ -13,41 +13,71 @@ grow_vertical = 2
 script = ExtResource("1_utuui")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 2007.0
-offset_bottom = 1170.0
+layout_mode = 2
+offset_right = 1920.0
+offset_bottom = 1080.0
 color = Color(0.447059, 0.682353, 0.380392, 1)
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 229.0
-offset_top = 418.0
-offset_right = 1779.0
-offset_bottom = 509.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 80
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="MainTitle" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("2_ynlmm")
+theme_override_font_sizes/font_size = 128
+text = "Эволюция"
+
+[node name="VersionNumber" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 9
 theme_override_fonts/font = ExtResource("2_ynlmm")
 theme_override_font_sizes/font_size = 72
-text = "Добро пожаловать в игру про эволюцию.
-"
+text = "v0.0.1"
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -116.0
-offset_top = -35.0
-offset_right = 116.0
-offset_bottom = 39.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="MenuOptions" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="StartGameButton" type="Button" parent="MarginContainer/HBoxContainer/MenuOptions"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ynlmm")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 72
 text = "Начать игру"
+flat = true
+alignment = 2
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="SettingsButton" type="Button" parent="MarginContainer/HBoxContainer/MenuOptions"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ynlmm")
+theme_override_font_sizes/font_size = 72
+text = "Настройки"
+flat = true
+alignment = 2
+
+[node name="ExitGameButton" type="Button" parent="MarginContainer/HBoxContainer/MenuOptions"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ynlmm")
+theme_override_font_sizes/font_size = 72
+text = "Выйти"
+flat = true
+alignment = 2
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MenuOptions/StartGameButton" to="." method="_on_button_pressed"]

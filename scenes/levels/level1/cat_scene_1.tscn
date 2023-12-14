@@ -15,59 +15,61 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.447059, 0.682353, 0.380392, 1)
 
-[node name="Button" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 203.0
-offset_top = 99.0
-offset_right = 507.0
-offset_bottom = 190.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_saw54")
-theme_override_font_sizes/font_size = 28
-text = "Продолжить
-"
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 80
 
-[node name="Label" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 142.0
-offset_top = -441.0
-offset_right = 563.0
-offset_bottom = -360.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="HBoxContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_orsmo")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("1_saw54")
 theme_override_font_sizes/font_size = 66
 text = "Дикинсонии"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(414, 509)
-scale = Vector2(0.67749, 0.777394)
-texture = ExtResource("2_orsmo")
-
-[node name="Label2" type="Label" parent="."]
-offset_left = 775.0
-offset_top = 225.0
-offset_right = 2867.0
-offset_bottom = 618.0
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("1_saw54")
-theme_override_font_sizes/font_size = 33
-text = "Один из наиболее характерных родов ископаемых животных
-эдиакарской биоты. Особи от 1 мм до 1,4 м в длину овальной или
-змеевидной формы. Состоят из большого количества ленточных
-сегментов, выходящих из центрального гребня или желобка.
+theme_override_font_sizes/font_size = 35
+text = "Один из наиболее характерных родов ископаемых животных эдиакарской биоты. Особи от 1 мм до 1,4 м в длину овальной или змеевидной формы. Состоят из большого количества ленточных сегментов, выходящих из центрального гребня или желобка.
 
-У дикинсоний наблюдается неограниченный изометрический
-рост — увеличение геометрических размеров с сохранением
-пропорций до тех пор, пока организм не будет захоронен
-осадочными породами или убит каким-либо другим способом."
+У дикинсоний наблюдается неограниченный изометрический рост — увеличение геометрических размеров с сохранением пропорций до тех пор, пока организм не будет захоронен осадочными породами или убит каким-либо другим способом."
+autowrap_mode = 3
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_saw54")
+theme_override_font_sizes/font_size = 48
+text = "Продолжить
+"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -22,42 +22,61 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.447059, 0.682353, 0.380392, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 678.0
-offset_top = 564.0
-offset_right = 1182.0
-offset_bottom = 625.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 80
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_right = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/GridContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="Label" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("1_b2mqp")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 64
 text = "Эдиакарская биота"
 
-[node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 649.0
-offset_right = 1908.0
-offset_bottom = 822.0
+[node name="Label2" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("1_b2mqp")
-theme_override_font_sizes/font_size = 33
-text = "Все эдиакарские живые существа обитали в море, суша ещё оставалась безжизненной. Большинство из них
-резко отличаются ото всех других ныне известных живых существ и представляют собой мягкотелые, в
-основном сидячие организмы, имеющие трубчатую структуру. Эдиакарские организмы представляют собой
-первую достоверно подтверждённую фауну многоклеточных животных "
+theme_override_font_sizes/font_size = 36
+text = "Все эдиакарские живые существа обитали в море, суша ещё оставалась безжизненной. Большинство из них резко отличаются ото всех других ныне известных живых существ и представляют собой мягкотелые, в основном сидячие организмы, имеющие трубчатую структуру. Эдиакарские организмы представляют собой первую достоверно подтверждённую фауну многоклеточных животных "
+autowrap_mode = 3
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 722.0
-offset_top = 862.0
-offset_right = 1167.0
-offset_bottom = 961.0
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_w3ob7")
+expand_mode = 5
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("1_b2mqp")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 48
 text = "На следующий уровень"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(918, 309)
-scale = Vector2(1.078, 0.924349)
-texture = ExtResource("2_w3ob7")
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/VBoxContainer2/Button" to="." method="_on_button_pressed"]
