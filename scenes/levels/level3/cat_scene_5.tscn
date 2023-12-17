@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://b58up4eusotf7"]
+
+[ext_resource type="Script" path="res://scenes/levels/level3/cat_scene_5.gd" id="1_4jvsq"]
+[ext_resource type="Texture2D" uid="uid://cfrtybf167qwe" path="res://assets/sprites/catscene/catsheen2.png" id="2_2nbu3"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_i87cr"]
+
+[node name="cat_scene5" type="Node"]
+script = ExtResource("1_4jvsq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 80
+
+[node name="HBoxContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_2nbu3")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_i87cr")
+theme_override_font_sizes/font_size = 66
+text = "Хайкоуихтис"
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_i87cr")
+theme_override_font_sizes/font_size = 33
+text = "Мелкое (2,5 см) водное хордовое. Примитивный хрящевой позвоночник позволял ему плавать совсем иначе, чем это делают членистоногие животные. Маленькое тельце хайкоуихтиса было лишено плавников, но зато у животного были глаза, жабры и головной мозг, что делало его самым продвинутым обитателем кембрийских морей.
+По-видимому, хайкоуихтисы жили крупными стаями из нескольких сотен особей, что помогало им спасаться от хищников. Судя по небольшим размерам и своеобразной форме тела, плавали хайкоуихтисы плохо. В основном они держались у морского дна, где собирали мелкие частицы пищи."
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_i87cr")
+theme_override_font_sizes/font_size = 48
+text = "Продолжить
+"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

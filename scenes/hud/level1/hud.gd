@@ -22,5 +22,5 @@ func show_level_complete_hud():
 	$LevelCompleteLabel.set("visible_characters", -1)
 
 func _on_hide_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/levels/level2/level_2.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level2/cat_scene_3.tscn")
 	pass

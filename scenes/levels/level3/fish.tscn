@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://2ojgicxc8udc"]
+
+[ext_resource type="Script" path="res://animal3_1.gd" id="1_0t2oa"]
+[ext_resource type="Texture2D" uid="uid://dwptv8soe3sir" path="res://assets/sprites/animals3/IMG_20231124_185912_033.png" id="2_k6d7j"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(4, 4)
+collision_layer = 2
+script = ExtResource("1_0t2oa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(0.339867, 0.423267)
+texture = ExtResource("2_k6d7j")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-1.73189, -0.445135)
+scale = Vector2(0.345051, 0.427807)
+polygon = PackedVector2Array(75.5, -22.25, 10.5, -45.5, -24, -44.25, -55.5, -43.5, -79.7509, -34.6064, -78.3019, -27.5939, -77.5773, -10.0626, -71.7811, 3.37801, -67.4339, 23.2468, -69.6075, 32.0124, -73, 31.25, -19.5, 30.25, 37.75, 29, 81.095, 24.4156, 81.095, 5.13114, 77.4724, -7.14076, 77.4724, -14.7376)

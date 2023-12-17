@@ -13,29 +13,29 @@ font_update_color = Color(1, 0.937255, 0, 1)
 font_normal_color = Color(1, 1, 1, 1)
 
 [node name="up" type="TouchScreenButton" parent="."]
-position = Vector2(1675, 756)
-scale = Vector2(1.53571, 1.45238)
+position = Vector2(1681, 725)
+scale = Vector2(2.39286, 2.16667)
 texture_normal = ExtResource("2_jtvso")
 action = "up"
 visibility_mode = 1
 
 [node name="down" type="TouchScreenButton" parent="."]
-position = Vector2(1676, 884)
-scale = Vector2(1.60715, 1.38095)
+position = Vector2(1684, 885)
+scale = Vector2(2.39285, 2.2381)
 texture_normal = ExtResource("3_4llnl")
 action = "down"
 visibility_mode = 1
 
 [node name="left" type="TouchScreenButton" parent="."]
-position = Vector2(1602, 828)
-scale = Vector2(1.41026, 1.48387)
+position = Vector2(50, 866)
+scale = Vector2(2.66667, 2.3871)
 texture_normal = ExtResource("4_if6ud")
 action = "left"
 visibility_mode = 1
 
 [node name="right" type="TouchScreenButton" parent="."]
-position = Vector2(1735, 827)
-scale = Vector2(1.58974, 1.48387)
+position = Vector2(212, 864)
+scale = Vector2(2.51283, 2.41936)
 texture_normal = ExtResource("5_sd04j")
 action = "right"
 visibility_mode = 1

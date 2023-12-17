@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfqu8cnun1k70"]
+
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_yf4vh"]
+[ext_resource type="Script" path="res://scenes/hud/level3/task_1.gd" id="1_yosf6"]
+
+[node name="Task1" type="Node"]
+script = ExtResource("1_yosf6")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -510.0
+offset_top = -490.0
+offset_right = 407.0
+offset_bottom = -439.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_yf4vh")
+theme_override_font_sizes/font_size = 42
+text = "Чтобы пройти дальше ответьте на вопрос"
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -568.0
+offset_top = 146.0
+offset_right = 527.0
+offset_bottom = 196.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_yf4vh")
+theme_override_font_sizes/font_size = 40
+text = "Когда появились первые членистоногие животные?"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 655.0
+offset_top = 225.0
+offset_right = 1148.0
+offset_bottom = 316.0
+theme_override_fonts/font = ExtResource("1_yf4vh")
+theme_override_font_sizes/font_size = 35
+text = "Эдиакарская биота"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 657.0
+offset_top = 512.0
+offset_right = 1150.0
+offset_bottom = 603.0
+theme_override_fonts/font = ExtResource("1_yf4vh")
+theme_override_font_sizes/font_size = 35
+text = "Ордовикский период"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 657.0
+offset_top = 362.0
+offset_right = 1150.0
+offset_bottom = 453.0
+theme_override_fonts/font = ExtResource("1_yf4vh")
+theme_override_font_sizes/font_size = 35
+text = "Кембрийский период"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
