@@ -42,7 +42,7 @@ animations = [{
 radius = 68.0
 height = 258.0
 
-[node name="Dickinsonia" type="CharacterBody2D"]
+[node name="Dickinsonia" type="CharacterBody2D" groups=["player"]]
 position = Vector2(2, 0)
 collision_layer = 2
 script = ExtResource("1_4igrk")

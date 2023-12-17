@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cge7bmu5wjgh3"]
+[gd_scene load_steps=9 format=3 uid="uid://cge7bmu5wjgh3"]
 
 [ext_resource type="Texture2D" uid="uid://b1tan5h5y52j7" path="res://assets/tiles/level_2/tile.png" id="1_8fv5r"]
 [ext_resource type="Script" path="res://scenes/levels/level2/level_2.gd" id="1_58bkl"]
-[ext_resource type="PackedScene" uid="uid://cw8uxnkocgss4" path="res://scenes/level2/pikaia.tscn" id="2_xw58r"]
+[ext_resource type="PackedScene" uid="uid://cw8uxnkocgss4" path="res://scenes/levels/level2/pikaia.tscn" id="2_xw58r"]
 [ext_resource type="PackedScene" uid="uid://bxwboaoquym2d" path="res://scenes/levels/level1/food.tscn" id="3_wt566"]
 [ext_resource type="PackedScene" uid="uid://b0dqgdwec8gxv" path="res://scenes/hud/level2/hud.tscn" id="5_kkorm"]
-[ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/sprites/rock/rock.png" id="6_gj0ew"]
+[ext_resource type="PackedScene" uid="uid://c0pq2dv1wg0jo" path="res://scenes/levels/shared/rock.tscn" id="6_hupai"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpfqc"]
 texture = ExtResource("1_8fv5r")
@@ -23,9 +23,6 @@ tile_size = Vector2i(256, 256)
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_qpfqc")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2m3i"]
-size = Vector2(232, 255)
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_58bkl")
@@ -113,16 +110,5 @@ position = Vector2(2385, 399)
 
 [node name="HUD" parent="." instance=ExtResource("5_kkorm")]
 
-[node name="ExitArea" type="Area2D" parent="."]
-position = Vector2(4260, 2180)
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
-position = Vector2(-23, -5)
-shape = SubResource("RectangleShape2D_g2m3i")
-
-[node name="Sprite2D" type="Sprite2D" parent="ExitArea"]
-rotation = 1.5708
-texture = ExtResource("6_gj0ew")
-
-[connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
+[node name="Rock" parent="." instance=ExtResource("6_hupai")]
+position = Vector2(4220, 2177)
