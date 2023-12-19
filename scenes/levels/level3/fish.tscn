@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://animal3_1.gd" id="1_0t2oa"]
 [ext_resource type="Texture2D" uid="uid://dwptv8soe3sir" path="res://assets/sprites/animals3/IMG_20231124_185912_033.png" id="2_k6d7j"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(4, 4)
 collision_layer = 2
 script = ExtResource("1_0t2oa")

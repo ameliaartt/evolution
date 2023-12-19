@@ -24,6 +24,7 @@ func show_level_complete_hud(food_count):
 	$LevelCompleteLabel.text = "Счёт: " + str(food_count)
 	if food_count > 10:
 		$HideButton.text = "Закончить уровень"
+	Global.second_stage_food_count = food_count 
 
 func hide_level_complete_hud():
 	$LevelCompleteLabel.set("visible_characters", 0)

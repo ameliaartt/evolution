@@ -43,9 +43,6 @@ limit_top = 0
 limit_right = 4352
 limit_bottom = 4352
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(8704, 0)
-
 [node name="Foods" type="Node2D" parent="."]
 
 [node name="Food" parent="Foods" instance=ExtResource("3_wt566")]

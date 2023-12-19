@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://scenes/levels/shared/rock.gd" id="1_ggcol"]
 [ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/sprites/rock/rock.png" id="1_yfjsu"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ahr3"]
 size = Vector2(823.625, 566.75)
 
