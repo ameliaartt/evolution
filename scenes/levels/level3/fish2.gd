@@ -14,3 +14,5 @@ func _physics_process(delta):
 	var input = Input.get_vector("left", "right", "up", "down")
 	position += accel*input*delta
 	move_and_slide()
+	
+

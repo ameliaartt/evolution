@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxwboaoquym2d"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/food.gd" id="1_bnrxn"]
-[ext_resource type="Texture2D" uid="uid://cvg5wwvdkrcnf" path="res://assets/sprites/food/food.png" id="1_xnwch"]
+[ext_resource type="Texture2D" uid="uid://b2stkdoie5416" path="res://assets/food/food2.png" id="2_2myq5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d8yc5"]
 height = 32.0
@@ -15,7 +15,8 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_d8yc5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_xnwch")
+position = Vector2(1, 0)
+scale = Vector2(0.132812, 0.12793)
+texture = ExtResource("2_2myq5")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

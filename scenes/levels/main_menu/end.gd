@@ -2,5 +2,5 @@ extends Control
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/levels/level1/cat_scene_1.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/main_menu/menu.tscn")
 	pass # Replace with function body.

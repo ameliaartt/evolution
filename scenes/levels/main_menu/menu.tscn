@@ -49,7 +49,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 9
 theme_override_fonts/font = ExtResource("2_ynlmm")
 theme_override_font_sizes/font_size = 72
-text = "v0.0.1"
+text = "v1.0"
 
 [node name="MenuOptions" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -64,11 +64,11 @@ text = "Начать игру"
 flat = true
 alignment = 2
 
-[node name="SettingsButton" type="Button" parent="MarginContainer/HBoxContainer/MenuOptions"]
+[node name="reitingButton" type="Button" parent="MarginContainer/HBoxContainer/MenuOptions"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ynlmm")
 theme_override_font_sizes/font_size = 72
-text = "Настройки"
+text = "Рейтинг"
 flat = true
 alignment = 2
 
@@ -81,3 +81,4 @@ flat = true
 alignment = 2
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MenuOptions/StartGameButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MenuOptions/reitingButton" to="." method="_on_reiting_button_pressed"]

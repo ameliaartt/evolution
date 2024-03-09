@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf2knnkyjthpc"
-path="res://.godot/imported/dickinsonia1.png-ea588ad92fd6c9959161f9f49f8b6de6.ctex"
+uid="uid://dtgcymqp5twwl"
+path="res://.godot/imported/photo_2024-02-08_16-24-47.jpg-f3185f76218086245cd3da1671cbca97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/diskinsonia/dickinsonia1.png"
-dest_files=["res://.godot/imported/dickinsonia1.png-ea588ad92fd6c9959161f9f49f8b6de6.ctex"]
+source_file="res://assets/tiles/level_2/photo_2024-02-08_16-24-47.jpg"
+dest_files=["res://.godot/imported/photo_2024-02-08_16-24-47.jpg-f3185f76218086245cd3da1671cbca97.ctex"]
 
 [params]
 

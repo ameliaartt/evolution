@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://2ojgicxc8udc" path="res://scenes/levels/level3/fish.tscn" id="3_b1ev0"]
 [ext_resource type="PackedScene" uid="uid://bxwboaoquym2d" path="res://scenes/levels/level1/food.tscn" id="4_2jg7m"]
 [ext_resource type="PackedScene" uid="uid://c0qahj5yt1c2p" path="res://scenes/hud/level3/hud.tscn" id="5_srb81"]
-[ext_resource type="PackedScene" uid="uid://cfqu8cnun1k70" path="res://scenes/hud/level3/task_1.tscn" id="6_feuqt"]
-[ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/sprites/rock/rock.png" id="6_pueto"]
+[ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/tiles/rock.png" id="6_pueto"]
+[ext_resource type="PackedScene" uid="uid://cfqu8cnun1k70" path="res://scenes/hud/level3/task_1.tscn" id="6_scjwj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpfqc"]
 texture = ExtResource("2_r7vg8")
@@ -29,7 +29,7 @@ sources/0 = SubResource("TileSetAtlasSource_qpfqc")
 size = Vector2(249, 255)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v05nn"]
-size = Vector2(261, 167)
+size = Vector2(261, 242)
 
 [node name="Level3_1" type="Node2D"]
 script = ExtResource("1_f82mu")
@@ -115,9 +115,9 @@ position = Vector2(3959, 2933)
 [node name="Food2" parent="Foods" instance=ExtResource("4_2jg7m")]
 position = Vector2(2153, 1674)
 
-[node name="HUD" parent="." instance=ExtResource("5_srb81")]
+[node name="Task1" parent="." instance=ExtResource("6_scjwj")]
 
-[node name="Task1" parent="." instance=ExtResource("6_feuqt")]
+[node name="HUD" parent="." instance=ExtResource("5_srb81")]
 
 [node name="ExitArea" type="Area2D" parent="."]
 position = Vector2(4260, 2180)
@@ -128,24 +128,17 @@ position = Vector2(-25, -1801)
 shape = SubResource("RectangleShape2D_g2m3i")
 
 [node name="Sprite2D" type="Sprite2D" parent="ExitArea"]
-position = Vector2(-24, -1798)
+position = Vector2(-30, -1798)
 rotation = 1.5708
 texture = ExtResource("6_pueto")
 
 [node name="TestArea" type="Area2D" parent="."]
-position = Vector2(638, 902)
+position = Vector2(651, 949)
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestArea"]
-position = Vector2(3.5, 34.5)
+position = Vector2(-4, -45)
 shape = SubResource("RectangleShape2D_v05nn")
-
-[node name="Sprite2D" type="Sprite2D" parent="TestArea"]
-position = Vector2(1, 35)
-texture = ExtResource("6_pueto")
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="TestArea"]
-position = Vector2(3, 52)
-polygon = PackedVector2Array(-122, -5, -117, 20, -99, 39, -77, 51, -51, 59, -15, 62, 20, 63, 63, 57, 96, 43, 117, 24, 125, 4, 119, -20, 91, -43, 56, -56, 33, -61, 2, -64, -47, -58, -79, -48, -108, -29)
 
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
 [connection signal="body_entered" from="TestArea" to="." method="_on_test_area_body_entered"]

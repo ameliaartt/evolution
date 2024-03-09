@@ -12,7 +12,7 @@ func delete_food(food):
 func _ready():
 	for food in $Foods.get_children(false):
 		food.get_node("CollisionShape2D").scale = Vector2(3.0, 3.0)
-		food.get_node("Sprite2D").texture = load("res://assets/sprites/food/food2.png")
+		food.get_node("Sprite2D").texture = load("res://assets/food/food2.png")
 		food.player_ate.connect(delete_food.bind(food))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

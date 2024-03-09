@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cw8uxnkocgss4" path="res://scenes/level2/pikaia.tscn" id="2_xw58r"]
 [ext_resource type="PackedScene" uid="uid://bxwboaoquym2d" path="res://scenes/levels/level1/food.tscn" id="3_wt566"]
 [ext_resource type="PackedScene" uid="uid://b0dqgdwec8gxv" path="res://scenes/hud/level2/hud.tscn" id="5_kkorm"]
-[ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/sprites/rock/rock.png" id="6_gj0ew"]
+[ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/tiles/rock.png" id="6_gj0ew"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpfqc"]
 texture = ExtResource("1_8fv5r")
@@ -50,66 +50,67 @@ limit_bottom = 4352
 position = Vector2(8704, 0)
 
 [node name="Foods" type="Node2D" parent="."]
+position = Vector2(12, 0)
 
 [node name="Food" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(3427, 2425)
-
-[node name="Food3" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(3977, 389)
-
-[node name="Food4" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(1929, 926)
-
-[node name="Food5" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(965, 896)
-
-[node name="Food6" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(2474, 1950)
-
-[node name="Food7" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(2982, 1420)
-
-[node name="Food8" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(3964, 1433)
-
-[node name="Food9" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(3426, 2955)
-
-[node name="Food10" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(1883, 1942)
-
-[node name="Food11" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(3941, 3975)
-
-[node name="Food13" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(2459, 3928)
-
-[node name="Food14" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(449, 4029)
-
-[node name="Food15" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(1989, 3471)
-
-[node name="Food16" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(888, 2996)
-
-[node name="Food17" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(2881, 880)
-
-[node name="Food18" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(933, 1943)
-
-[node name="Food19" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(1465, 3971)
-
-[node name="Food20" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(418, 1394)
-
-[node name="Food12" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(3938, 3467)
+position = Vector2(2432, 383)
 
 [node name="Food2" parent="Foods" instance=ExtResource("3_wt566")]
-position = Vector2(2385, 399)
+position = Vector2(3386, 2931)
+
+[node name="Food3" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(869, 2977)
+
+[node name="Food4" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(3428, 2444)
+
+[node name="Food5" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(3971, 1397)
+
+[node name="Food6" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(2466, 1884)
+
+[node name="Food7" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(2930, 1358)
+
+[node name="Food8" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(1884, 1963)
+
+[node name="Food9" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(894, 1963)
+
+[node name="Food10" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(396, 1448)
+
+[node name="Food11" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(1918, 910)
+
+[node name="Food12" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(2937, 925)
+
+[node name="Food13" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(3957, 400)
+
+[node name="Food14" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(863, 871)
+
+[node name="Food15" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(3949, 3417)
+
+[node name="Food16" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(1904, 3424)
+
+[node name="Food17" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(3950, 4009)
+
+[node name="Food18" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(356, 4001)
+
+[node name="Food19" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(1432, 3984)
+
+[node name="Food20" parent="Foods" instance=ExtResource("3_wt566")]
+position = Vector2(2390, 3941)
 
 [node name="HUD" parent="." instance=ExtResource("5_kkorm")]
 

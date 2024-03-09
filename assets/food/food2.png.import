@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3pvvlab6pj6v"
-path="res://.godot/imported/Untitled (2).png-c03f573b41245f37d796829e4d6db678.ctex"
+uid="uid://b2stkdoie5416"
+path="res://.godot/imported/food2.png-cacac6092f807e4d35dde72eb7044c0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/animals3/Untitled (2).png"
-dest_files=["res://.godot/imported/Untitled (2).png-c03f573b41245f37d796829e4d6db678.ctex"]
+source_file="res://assets/food/food2.png"
+dest_files=["res://.godot/imported/food2.png-cacac6092f807e4d35dde72eb7044c0d.ctex"]
 
 [params]
 
