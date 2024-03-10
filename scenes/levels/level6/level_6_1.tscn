@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cw8uxnkocgss4" path="res://scenes/level2/pikaia.tscn" id="4_86mpf"]
 [ext_resource type="PackedScene" uid="uid://bxwboaoquym2d" path="res://scenes/levels/level1/food.tscn" id="5_nukc7"]
 [ext_resource type="PackedScene" uid="uid://b0dqgdwec8gxv" path="res://scenes/hud/level2/hud.tscn" id="6_gigod"]
-[ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/sprites/rock/rock.png" id="7_o7xgk"]
+[ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/tiles/rock.png" id="7_o7xgk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpfqc"]
 texture = ExtResource("2_gd2oh")
@@ -25,6 +25,7 @@ texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0

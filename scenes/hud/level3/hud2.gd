@@ -25,4 +25,4 @@ func show_level_complete_hud(food_count):
 Счёт: " + str(food_count)
 
 func _on_hide_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/levels/level4/level_4_1.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/main_menu/vumer.tscn")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://cw8uxnkocgss4"]
 
 [ext_resource type="Script" path="res://scenes/level2/pikaia.gd" id="1_17xnp"]
-[ext_resource type="Texture2D" uid="uid://dxlce1p18no3o" path="res://assets/sprites/pikaia/pikaia.png" id="2_jnbys"]
-[ext_resource type="Texture2D" uid="uid://kfmnhlmjb58c" path="res://assets/sprites/pikaia/Untitled (1) (1) (1).png" id="3_vuffc"]
-[ext_resource type="Texture2D" uid="uid://c5ssneijsx7p1" path="res://assets/sprites/pikaia/Untitled (1) (1) (1) (1) (1).png" id="4_2lgqa"]
-[ext_resource type="Texture2D" uid="uid://d2o7j2r2pjpg1" path="res://assets/sprites/pikaia/Untitled (1) (1) (1) (1).png" id="5_120l8"]
+[ext_resource type="Texture2D" uid="uid://dxlce1p18no3o" path="res://assets/sprites/animals/pikaia.png" id="2_jnbys"]
+[ext_resource type="Texture2D" uid="uid://kfmnhlmjb58c" path="res://assets/sprites/animals/Untitled (1) (1) (1).png" id="3_vuffc"]
+[ext_resource type="Texture2D" uid="uid://c5ssneijsx7p1" path="res://assets/sprites/animals/Untitled (1) (1) (1) (1) (1).png" id="4_2lgqa"]
+[ext_resource type="Texture2D" uid="uid://d2o7j2r2pjpg1" path="res://assets/sprites/animals/Untitled (1) (1) (1) (1).png" id="5_120l8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2dvy"]
 animations = [{

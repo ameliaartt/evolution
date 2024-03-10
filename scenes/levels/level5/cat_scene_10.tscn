@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxj5w6isvja2c"]
+
+[ext_resource type="Script" path="res://scenes/levels/level5/cat_scene_10.gd" id="1_fml4g"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_ucyhv"]
+[ext_resource type="Texture2D" uid="uid://lsygb63qc5ra" path="res://assets/sprites/catscene/catsheen9.jpg" id="3_c55c0"]
+
+[node name="cat_scene6" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fml4g")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 80
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_right = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/GridContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="Label" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_ucyhv")
+theme_override_font_sizes/font_size = 64
+text = "Силурийский период"
+
+[node name="Label2" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_ucyhv")
+theme_override_font_sizes/font_size = 36
+text = "Нижняя граница силура определяется по крупному вымиранию, в результате которого исчезло около 60 % видов существовавших в ордовике морских организмов, — так называемому ордовикско-силурийскому вымиранию.
+Акантоды, или колючкозубые — класс вымерших рыб. Существовали с позднего силура до ранней перми. Появляются некоторые группы бесчелюстных — костнопанцирные и беспанцирные. Расцвет граптолитов и прямораковинных наутилоидей. Заметно возросло разнообразие брахиопод. "
+autowrap_mode = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("3_c55c0")
+expand_mode = 5
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ucyhv")
+theme_override_font_sizes/font_size = 48
+text = "На следующий уровень"
+
+[connection signal="pressed" from="MarginContainer/GridContainer/VBoxContainer2/Button" to="." method="_on_button_pressed"]

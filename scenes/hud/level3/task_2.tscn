@@ -1,10 +1,56 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwn5hlomybym4"]
+[gd_scene load_steps=3 format=3 uid="uid://de3k2fbkcsskx"]
 
-[ext_resource type="Script" path="res://scenes/hud/level3/task_2.gd" id="1_3shi0"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_0t8km"]
 
+[sub_resource type="GDScript" id="GDScript_t6dxh"]
+script/source = "extends Node
+
+signal button_pressed
+
+
+func _ready():
+	$Label.set(\"visible_characters\", 0)
+	$Label2.set(\"visible_characters\", 0)
+	$ColorRect.visible = false
+	$Button.visible = false
+	$Button2.visible = false
+	$Button3.visible = false
+
+func show_task():
+	$Label.set(\"visible_characters\", -1)
+	$Label2.set(\"visible_characters\", -1)
+	$ColorRect.visible = true
+	$Button.visible = true
+	$Button2.visible = true
+	$Button3.visible = true
+	$Label.text = \"Чтобы пройти дальше ответьте на вопрос\"
+	$Label2.text = \"Когда появились первые членистоногие животные?: 
+	1)Эдиакарская биота. 2)Кембрийский период. 3)Ордовикский период.\"
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file(\"res://scenes/levels/main_menu/end.tscn\")
+	pass # Replace with function body.
+
+func _on_button_2_pressed():
+	get_tree().change_scene_to_file(\"res://scenes/levels/main_menu/end.tscn\")
+	pass # Replace with function body.
+
+
+func _on_button_3_pressed():
+	$Label.set(\"visible_characters\", 0)
+	$Label2.set(\"visible_characters\", 0)
+	$ColorRect.visible = false
+	$Button.visible = false
+	$Button2.visible = false
+	$Button3.visible = false
+	
+	pass # Replace with function body.
+
+
+"
+
 [node name="Task1" type="CanvasLayer"]
-script = ExtResource("1_3shi0")
+script = SubResource("GDScript_t6dxh")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1915.0

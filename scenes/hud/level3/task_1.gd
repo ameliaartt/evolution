@@ -1,7 +1,8 @@
 extends Node
 
 signal button_pressed
-
+var random = RandomNumberGenerator.new()
+var num_num = 0
 
 func _ready():
 	$Label.set("visible_characters", 0)
@@ -10,6 +11,8 @@ func _ready():
 	$Button.visible = false
 	$Button2.visible = false
 	$Button3.visible = false
+	random.randomize()
+	num_num += random.randi_range(1, 3)
 
 func show_task():
 	$Label.set("visible_characters", -1)
@@ -19,26 +22,47 @@ func show_task():
 	$Button2.visible = true
 	$Button3.visible = true
 	$Label.text = "Чтобы пройти дальше ответьте на вопрос"
-	$Label2.text = "Когда появились первые членистоногие животные?: 
-	1)Эдиакарская биота. 2)Кембрийский период. 3)Ордовикский период."
+	if num_num == 1:
+		$Label2.text = Tasks.task3_lvl3
+	if num_num == 2:
+		$Label2.text = Tasks.task1_lvl3
+	if num_num == 3:
+		$Label2.text = Tasks.task2_lvl3
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/levels/main_menu/end.tscn")
+	if num_num == 1:
+		$Label.set("visible_characters", 0)
+		$Label2.set("visible_characters", 0)
+		$ColorRect.visible = false
+		$Button.visible = false
+		$Button2.visible = false
+		$Button3.visible = false
+	else:
+		get_tree().change_scene_to_file("res://scenes/levels/main_menu/end.tscn")
 	pass # Replace with function body.
 
 func _on_button_2_pressed():
-	get_tree().change_scene_to_file("res://scenes/levels/main_menu/end.tscn")
+	if num_num == 3:
+		$Label.set("visible_characters", 0)
+		$Label2.set("visible_characters", 0)
+		$ColorRect.visible = false
+		$Button.visible = false
+		$Button2.visible = false
+		$Button3.visible = false
+	else:
+		get_tree().change_scene_to_file("res://scenes/levels/main_menu/end.tscn")
 	pass # Replace with function body.
 
 
 func _on_button_3_pressed():
-	$Label.set("visible_characters", 0)
-	$Label2.set("visible_characters", 0)
-	$ColorRect.visible = false
-	$Button.visible = false
-	$Button2.visible = false
-	$Button3.visible = false
-	
+	if num_num == 2:
+		$Label.set("visible_characters", 0)
+		$Label2.set("visible_characters", 0)
+		$ColorRect.visible = false
+		$Button.visible = false
+		$Button2.visible = false
+		$Button3.visible = false
+	else:
+		get_tree().change_scene_to_file("res://scenes/levels/main_menu/end.tscn")
 	pass # Replace with function body.
-
 
