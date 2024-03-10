@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://c61ros8lgxgyv"]
+
+[ext_resource type="Script" path="res://scenes/hud/level6/task6.gd" id="1_nj3cq"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_3vi66"]
+
+[node name="Task1" type="CanvasLayer"]
+script = ExtResource("1_nj3cq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1915.0
+offset_bottom = 1084.0
+color = Color(0.215686, 0.458824, 0.27451, 1)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -493.0
+offset_top = -383.0
+offset_right = 424.0
+offset_bottom = -332.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_3vi66")
+theme_override_font_sizes/font_size = 42
+text = "Чтобы пройти дальше ответьте на вопрос"
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -859.0
+offset_top = 236.0
+offset_right = 794.0
+offset_bottom = 330.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_3vi66")
+theme_override_font_sizes/font_size = 40
+
+[node name="Button" type="Button" parent="."]
+offset_left = 661.0
+offset_top = 386.0
+offset_right = 1154.0
+offset_bottom = 477.0
+theme_override_fonts/font = ExtResource("2_3vi66")
+theme_override_font_sizes/font_size = 35
+text = "1"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 663.0
+offset_top = 532.0
+offset_right = 1156.0
+offset_bottom = 623.0
+theme_override_fonts/font = ExtResource("2_3vi66")
+theme_override_font_sizes/font_size = 35
+text = "2"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 663.0
+offset_top = 696.0
+offset_right = 1156.0
+offset_bottom = 787.0
+theme_override_fonts/font = ExtResource("2_3vi66")
+theme_override_font_sizes/font_size = 35
+text = "3"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_2_pressed"]

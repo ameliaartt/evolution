@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/levels/level5/cat_scene_10.gd" id="1_fml4g"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_ucyhv"]
-[ext_resource type="Texture2D" uid="uid://lsygb63qc5ra" path="res://assets/sprites/catscene/catsheen9.jpg" id="3_c55c0"]
+[ext_resource type="Texture2D" uid="uid://0tq6qp55hpec" path="res://assets/sprites/catscene/catsheen10.jpg" id="3_yr4qh"]
 
 [node name="cat_scene6" type="Control"]
 layout_mode = 3
@@ -51,7 +51,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_ucyhv")
 theme_override_font_sizes/font_size = 64
-text = "Силурийский период"
+text = "Девонский период"
 
 [node name="Label2" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
@@ -60,8 +60,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_ucyhv")
 theme_override_font_sizes/font_size = 36
-text = "Нижняя граница силура определяется по крупному вымиранию, в результате которого исчезло около 60 % видов существовавших в ордовике морских организмов, — так называемому ордовикско-силурийскому вымиранию.
-Акантоды, или колючкозубые — класс вымерших рыб. Существовали с позднего силура до ранней перми. Появляются некоторые группы бесчелюстных — костнопанцирные и беспанцирные. Расцвет граптолитов и прямораковинных наутилоидей. Заметно возросло разнообразие брахиопод. "
+text = "Этот период богат биотическими событиями. Рыбы достигают огромного разнообразия (отсюда и неофициальное название периода — эпоха рыб), плакодермы занимают почти все морские зоны обитания. Из лопастепёрых рыб эволюционируют первые четвероногие. Климат практически по всей суше был тропическим Растения продолжали распространяться по суше, появились первые представители папоротниковидных и семенных растений. Период завершился вымиранием, которое, в частности, уничтожило плакодерм и почти всех трилобитов."
 autowrap_mode = 3
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/GridContainer"]
@@ -71,7 +70,7 @@ size_flags_vertical = 6
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/VBoxContainer2"]
 layout_mode = 2
-texture = ExtResource("3_c55c0")
+texture = ExtResource("3_yr4qh")
 expand_mode = 5
 
 [node name="Button" type="Button" parent="MarginContainer/GridContainer/VBoxContainer2"]

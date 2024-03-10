@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyatux2svfvo2"]
+
+[ext_resource type="Script" path="res://scenes/levels/level6/cat_scene_13_1.gd" id="1_7yn2j"]
+[ext_resource type="Texture2D" uid="uid://cy0ojfjia78sp" path="res://assets/sprites/catscene/catsheen12.png" id="2_yl8bb"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_o2gq6"]
+
+[node name="cat_scene5" type="Node"]
+script = ExtResource("1_7yn2j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 80
+
+[node name="HBoxContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_yl8bb")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_o2gq6")
+theme_override_font_sizes/font_size = 66
+text = "Синапсид"
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_o2gq6")
+theme_override_font_sizes/font_size = 32
+text = "Характерной чертой синапсид является наличие с каждой стороны их черепа одного височного отверстия. Височные отверстия служат для выхода челюстных мышц, а их наличие позволяло тем амниотам, которые их имели, более эффективно — по сравнению с земноводными и черепахами (череп которых височных отверстий не имеет) — кусать свою добычу. 
+На рубеже ранней и средней перми на смену пеликозаврам приходят терапсиды, отличавшиеся существенно более активным образом жизни и высоким уровнем метаболизма и занимавшие в течение средней и поздней перми доминирующие позиции среди наземных позвоночных."
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_o2gq6")
+theme_override_font_sizes/font_size = 48
+text = "Продолжить
+"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

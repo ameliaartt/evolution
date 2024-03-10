@@ -29,7 +29,6 @@ func update_food(food_count):
 func delete_food(food):
 	food.queue_free()
 	$Dickinsonia.food_count += 1
-	Tasks.all_food += 1
 	update_food($Dickinsonia.food_count)
 
 func spawn_food():

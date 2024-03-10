@@ -9,9 +9,8 @@ func update_food(food_count):
 
 func delete_food(food):
 	food.queue_free()
-	$Fish.food_count += 1
-	Tasks.all_food += 1
-	update_food($Fish.food_count)
+	$Pikaia.food_count += 1
+	update_food($Pikaia.food_count)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,7 +21,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func show_completion_hud():
-	$HUD.show_level_complete_hud($Fish.food_count)
+	$HUD.show_level_complete_hud($Pikaia.food_count)
 	$HUD/FoodLabel.visible = false
 	
 func show_task():

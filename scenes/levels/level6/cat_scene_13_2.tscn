@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://3mq2t2wg5gxe"]
+
+[ext_resource type="Script" path="res://scenes/levels/level6/cat_scene_13_2.gd" id="1_n6bpc"]
+[ext_resource type="Texture2D" uid="uid://d0x8njwlx54uv" path="res://assets/sprites/catscene/catsheen13.png" id="2_71v2k"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_ewnss"]
+
+[node name="cat_scene5" type="Node"]
+script = ExtResource("1_n6bpc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 80
+
+[node name="HBoxContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_71v2k")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_ewnss")
+theme_override_font_sizes/font_size = 66
+text = "Меганевр"
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_ewnss")
+theme_override_font_sizes/font_size = 39
+text = "род вымерших стрекозообразных насекомых, живших в конце каменноугольного периода . Включает Meganeura monyi, имевшую длину и переднего и заднего крыла в 300 мм и являющуюся, наряду с Meganeuropsis permiana, одним из крупнейших насекомых всех времён. 
+Охотились на примитивных растительноядных насекомых диктионеврид. Личинки вели наземный образ жизни и тоже были хищниками."
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ewnss")
+theme_override_font_sizes/font_size = 48
+text = "Продолжить
+"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

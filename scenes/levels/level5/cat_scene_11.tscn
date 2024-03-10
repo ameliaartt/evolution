@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dw3goy5fdh8dd"]
+[gd_scene load_steps=4 format=3 uid="uid://cb75mdi3edk0"]
 
-[ext_resource type="Texture2D" uid="uid://c25byq2nlm0vt" path="res://assets/sprites/catscene/catsheen8.png" id="1_gcnnf"]
 [ext_resource type="Script" path="res://scenes/levels/level5/cat_scene_11.gd" id="1_ulmtg"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_fybno"]
+[ext_resource type="Texture2D" uid="uid://bp05a1bp0uu5o" path="res://assets/sprites/catscene/catsheen11.jpg" id="2_grkbs"]
 
 [node name="cat_scene5" type="Node"]
 script = ExtResource("1_ulmtg")
@@ -32,7 +32,7 @@ columns = 2
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_gcnnf")
+texture = ExtResource("2_grkbs")
 expand_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
@@ -50,7 +50,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_fybno")
 theme_override_font_sizes/font_size = 66
-text = "Акантода"
+text = "Трилобит"
 
 [node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(600, 100)
@@ -60,9 +60,8 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_fybno")
 theme_override_font_sizes/font_size = 33
-text = "В своём строении акантоды сочетают признаки, характерные и для других групп палеозойских челюстноротых, отличаясь наличием хорошо выраженных плавниковых шипов перед всеми плавниками, кроме хвостового.
-Обитали как в морях, так и в пресных водоёмах; среди них преобладали планктонофаги и хищники.
- В составе класса выделяют четыре отряда, а также ряд родов неясного систематического положения"
+text = "Длина тела трилобитов доходила до 72 см, и даже до 90 см. Тело состояло из защищённой панцирем головы с двумя глазами, сегментированного туловища (торакс) и хвоста.
+Многие трилобиты обладали способностью свёртывать своё тело как мокрицы так, что всё мягкое тельце оказывалось под панцирем. Сворачивание служило защитой от более крупных хищников. "
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
