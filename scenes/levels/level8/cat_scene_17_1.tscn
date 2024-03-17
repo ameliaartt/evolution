@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dc0lfnwagv3kf"]
 
 [ext_resource type="Script" path="res://scenes/levels/level8/cat_scene_17_1.gd" id="1_fubdg"]
-[ext_resource type="Texture2D" uid="uid://cfrtybf167qwe" path="res://assets/sprites/catscene/catsheen2.png" id="2_cl23b"]
+[ext_resource type="Texture2D" uid="uid://dw80fqbyln02w" path="res://assets/sprites/catscene/catsheen17_2.png" id="2_hmkyd"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_u048f"]
 
 [node name="cat_scene5" type="Node"]
@@ -32,7 +32,7 @@ columns = 2
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_cl23b")
+texture = ExtResource("2_hmkyd")
 expand_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
@@ -50,7 +50,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_u048f")
 theme_override_font_sizes/font_size = 66
-text = "Хайкоуихтис"
+text = "Эораптор"
 
 [node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(600, 100)
@@ -60,8 +60,9 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_u048f")
 theme_override_font_sizes/font_size = 33
-text = "Мелкое (2,5 см) водное хордовое. Примитивный хрящевой позвоночник позволял ему плавать совсем иначе, чем это делают членистоногие животные. Маленькое тельце хайкоуихтиса было лишено плавников, но зато у животного были глаза, жабры и головной мозг, что делало его самым продвинутым обитателем кембрийских морей.
-По-видимому, хайкоуихтисы жили крупными стаями из нескольких сотен особей, что помогало им спасаться от хищников. Судя по небольшим размерам и своеобразной форме тела, плавали хайкоуихтисы плохо. В основном они держались у морского дна, где собирали мелкие частицы пищи."
+text = "Эораптор был довольно мелким динозавром, который достигал длины всего около 1 метра и весил около 10 кг. У него была длинная шея и хвост, короткие передние конечности и острые зубы.
+Пустотелые кости конечностей, удлиненные передние лапы, заканчивающиеся кривыми, острыми когтями, сближают эораптора с тераподами. Анатомическое строение эораптора свидетельствует о том, что динозавры произошли от мелких двуногих хищных рептилий в середине или конце триасового периода. Возможно что первые динозавры появились на Южноамериканском континенте.
+"
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]

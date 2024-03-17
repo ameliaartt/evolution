@@ -29,51 +29,6 @@ func show_task():
 	if num_num == 3:
 		$Label2.text = Tasks.task1_2_lvl4
 		
-func show_task2():
-	$Label.set("visible_characters", -1)
-	$Label2.set("visible_characters", -1)
-	$ColorRect.visible = true
-	$Button.visible = true
-	$Button2.visible = true
-	$Button3.visible = true
-	$Label.text = "Чтобы пройти дальше ответьте на вопрос"
-	if num_num == 1:
-		$Label2.text = Tasks.task2_3_lvl4
-	if num_num == 2:
-		$Label2.text = Tasks.task2_1_lvl4
-	if num_num == 3:
-		$Label2.text = Tasks.task2_2_lvl4
-	
-func show_task3():
-	$Label.set("visible_characters", -1)
-	$Label2.set("visible_characters", -1)
-	$ColorRect.visible = true
-	$Button.visible = true
-	$Button2.visible = true
-	$Button3.visible = true
-	$Label.text = "Чтобы пройти дальше ответьте на вопрос"
-	if num_num == 1:
-		$Label2.text = Tasks.task3_3_lvl4
-	if num_num == 2:
-		$Label2.text = Tasks.task3_1_lvl4
-	if num_num == 3:
-		$Label2.text = Tasks.task3_2_lvl4
-		
-func show_task4():
-	$Label.set("visible_characters", -1)
-	$Label2.set("visible_characters", -1)
-	$ColorRect.visible = true
-	$Button.visible = true
-	$Button2.visible = true
-	$Button3.visible = true
-	$Label.text = "Чтобы пройти дальше ответьте на вопрос"
-	if num_num == 1:
-		$Label2.text = Tasks.task4_3_lvl4
-	if num_num == 2:
-		$Label2.text = Tasks.task4_1_lvl4
-	if num_num == 3:
-		$Label2.text = Tasks.task4_2_lvl4
-		
 
 func _on_button_pressed():
 	if num_num == 1:

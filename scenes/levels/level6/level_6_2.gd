@@ -31,13 +31,13 @@ func show_task():
 	$Task1.show_task()
 	
 func show_task2():
-	$Task1.show_task2()
+	$Task3.show_task2()
 	
 func show_task3():
-	$Task1.show_task3()
+	$Task4.show_task3()
 	
 func show_task4():
-	$Task1.show_task4()
+	$Task5.show_task4()
 	
 func show_task5():
 	$Task2.show_task()

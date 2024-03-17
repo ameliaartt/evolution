@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://iynwu2dxctyf"]
+[gd_scene load_steps=8 format=3 uid="uid://iynwu2dxctyf"]
 
 [ext_resource type="Script" path="res://scenes/hud/level9/hud9.gd" id="1_tkmbe"]
 [ext_resource type="Texture2D" uid="uid://b8c2kuno0lylu" path="res://assets/sprites/details/green_sliderUp.png" id="2_lfgo2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bdvx548v0273e" path="res://assets/sprites/details/green_sliderLeft.png" id="4_2tje0"]
 [ext_resource type="Texture2D" uid="uid://cqekng5okbuky" path="res://assets/sprites/details/green_sliderRight.png" id="5_tuwiw"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="6_qqp3w"]
+[ext_resource type="PackedScene" uid="uid://bsdbsoi3pliqx" path="res://scenes/levels/main end/exed.tscn" id="7_rby65"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_tkmbe")
@@ -75,6 +76,22 @@ offset_bottom = 809.0
 theme_override_fonts/font = ExtResource("6_qqp3w")
 theme_override_font_sizes/font_size = 36
 text = "Закончить уровень"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -273.0
+offset_top = 26.0
+offset_right = -26.0
+offset_bottom = 93.0
+grow_horizontal = 0
+theme_override_colors/font_outline_color = Color(0.376471, 0.376471, 0.376471, 1)
+theme_override_fonts/font = ExtResource("6_qqp3w")
+theme_override_font_sizes/font_size = 48
+text = "Уровень 9"
+
+[node name="exed" parent="." instance=ExtResource("7_rby65")]
 
 [connection signal="timeout" from="FoodLabel/FoodLabelUpdateTimer" to="." method="_on_food_label_update_timer_timeout"]
 [connection signal="pressed" from="HideButton" to="." method="_on_hide_button_pressed"]

@@ -1,35 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cw8uxnkocgss4"]
+[gd_scene load_steps=4 format=3 uid="uid://cw8uxnkocgss4"]
 
 [ext_resource type="Script" path="res://scenes/level2/pikaia.gd" id="1_17xnp"]
-[ext_resource type="Texture2D" uid="uid://dxlce1p18no3o" path="res://assets/sprites/animals/pikaia.png" id="2_jnbys"]
-[ext_resource type="Texture2D" uid="uid://kfmnhlmjb58c" path="res://assets/sprites/animals/Untitled (1) (1) (1).png" id="3_vuffc"]
-[ext_resource type="Texture2D" uid="uid://c5ssneijsx7p1" path="res://assets/sprites/animals/Untitled (1) (1) (1) (1) (1).png" id="4_2lgqa"]
-[ext_resource type="Texture2D" uid="uid://d2o7j2r2pjpg1" path="res://assets/sprites/animals/Untitled (1) (1) (1) (1).png" id="5_120l8"]
+[ext_resource type="Texture2D" uid="uid://dh1qyvxtn72to" path="res://assets/sprites/animals/animal2.png" id="2_ac6ua"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_g2dvy"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_jnbys")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_vuffc")
-}],
-"loop": true,
-"name": &"up",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_2lgqa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_120l8")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 5.0
-}]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kyaue"]
+radius = 33.5
+height = 235.5
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(4, 4)
@@ -37,11 +13,9 @@ collision_layer = 2
 script = ExtResource("1_17xnp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_jnbys")
+texture = ExtResource("2_ac6ua")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_g2dvy")
-animation = &"up"
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(16.75, 4, -9.25, -14.75, -38.75, -37.5, -52.75, -78, -41.5, -96, -53.5, -104, -67.5, -90, -71.5, -48, -60.75, -19.25, -10, 21.25, 1.25, 30.75, 9.25, 54.75, 36, 86, 68, 104, 77.5, 98, 56, 52, 42, 12.75)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.25, -10.5)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_kyaue")

@@ -4,6 +4,7 @@ var count: int = 0
 var count2: int = 0
 var count3: int = 0
 var count4: int = 0
+
 func update_food(food_count):
 	$HUD.update_hud(food_count)
 
@@ -18,6 +19,7 @@ func _ready():
 		food.get_node("CollisionShape2D").scale = Vector2(3.0, 3.0)
 		food.get_node("Sprite2D").texture = load("res://assets/food/food2.png")
 		food.player_ate.connect(delete_food.bind(food))
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func show_completion_hud():
@@ -28,13 +30,13 @@ func show_task():
 	$Task1.show_task()
 	
 func show_task2():
-	$Task1.show_task2()
+	$Task2.show_task2()
 	
 func show_task3():
-	$Task1.show_task3()
+	$Task3.show_task3()
 	
 func show_task4():
-	$Task1.show_task4()
+	$Task4.show_task4()
 
 func _process(delta):
 	pass

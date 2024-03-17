@@ -28,13 +28,13 @@ func show_task():
 	$Task1.show_task()
 	
 func show_task2():
-	$Task1.show_task2()
+	$Task2.show_task2()
 	
 func show_task3():
-	$Task1.show_task3()
+	$Task3.show_task3()
 	
 func show_task4():
-	$Task1.show_task4()
+	$Task4.show_task4()
 	
 
 func _process(delta):
@@ -70,7 +70,7 @@ func _on_test_area_3_body_entered(body):
 
 
 func _on_test_area_4_body_entered(body):
-	if count3 == 0:
+	if count4 == 0:
 		show_task4()
 	count4 += 1
 	pass # Replace with function body.

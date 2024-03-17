@@ -10,6 +10,7 @@ func update_food(food_count):
 func delete_food(food):
 	food.queue_free()
 	$Pikaia.food_count += 1
+	Tasks.food_5 += 1
 	update_food($Pikaia.food_count)
 
 # Called when the node enters the scene tree for the first time.
@@ -28,10 +29,10 @@ func show_task():
 	$Task1.show_task()
 	
 func show_task2():
-	$Task1.show_task2()
+	$Task3.show_task2()
 	
 func show_task3():
-	$Task1.show_task3()
+	$Task4.show_task3()
 	
 func show_task4():
 	$Task2.show_task()

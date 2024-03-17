@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/levels/level8/cat_scene_16.gd" id="1_7qfnb"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_mgp6b"]
-[ext_resource type="Texture2D" uid="uid://u1bjmhhwig0m" path="res://assets/sprites/catscene/catsheen4.jpg" id="3_mdaiv"]
+[ext_resource type="Texture2D" uid="uid://kmdeem6vimmw" path="res://assets/sprites/catscene/catsheen16.jpg" id="3_kscjt"]
 
 [node name="cat_scene6" type="Control"]
 layout_mode = 3
@@ -51,7 +51,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_mgp6b")
 theme_override_font_sizes/font_size = 64
-text = "Ордовикский период"
+text = "Триасовый период"
 
 [node name="Label2" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
@@ -59,9 +59,11 @@ layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_mgp6b")
-theme_override_font_sizes/font_size = 36
-text = "Жизнь в ордовике продолжала бурно развиваться. Сопоставимая с кембрийским взрывом диверсификация организмов происходила в течение всего периода. Моллюски и членистоногие продолжали оставаться доминирующими морскими животными. Появляются первые челюстноротые рыбы. Суша по большей части продолжала оставаться пустынной, однако в прибрежных зонах стали появляться первые наземные растения.
-"
+theme_override_font_sizes/font_size = 35
+text = "Потепление климата вызывает высыхание многих внутренних морей. В оставшихся морях растёт уровень солёности. Происходит ослабление климатической зональности и сглаживание температурных различий. 
+Крупнейшими хищниками становятся водные формы. В это же время, происходит значительное падение разнообразия позвоночных.
+На суше развиваются рептилии.
+В триасе в разных группах насекомых основные изменения происходят в разное время. Сетчатокрылые в течение всего периода увеличивали видовое разнообразие. В раннем триасе не было наземных жуков, хотя в перми они были широко распространены. "
 autowrap_mode = 3
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/GridContainer"]
@@ -71,7 +73,7 @@ size_flags_vertical = 6
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/VBoxContainer2"]
 layout_mode = 2
-texture = ExtResource("3_mdaiv")
+texture = ExtResource("3_kscjt")
 expand_mode = 5
 
 [node name="Button" type="Button" parent="MarginContainer/GridContainer/VBoxContainer2"]

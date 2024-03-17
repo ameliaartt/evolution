@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://db5d2t72ln6j6"]
 
 [ext_resource type="Script" path="res://scenes/levels/level8/cat_scene_17_2.gd" id="1_y6xjv"]
-[ext_resource type="Texture2D" uid="uid://cfrtybf167qwe" path="res://assets/sprites/catscene/catsheen2.png" id="2_xx2cb"]
+[ext_resource type="Texture2D" uid="uid://bc1sqv2ghhtpw" path="res://assets/sprites/catscene/catsheen17_1.png" id="2_akvye"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_e5xmx"]
 
 [node name="cat_scene5" type="Node"]
@@ -32,7 +32,7 @@ columns = 2
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_xx2cb")
+texture = ExtResource("2_akvye")
 expand_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
@@ -50,7 +50,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_e5xmx")
 theme_override_font_sizes/font_size = 66
-text = "Хайкоуихтис"
+text = "Диногоргон"
 
 [node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(600, 100)
@@ -60,8 +60,9 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_e5xmx")
 theme_override_font_sizes/font_size = 33
-text = "Мелкое (2,5 см) водное хордовое. Примитивный хрящевой позвоночник позволял ему плавать совсем иначе, чем это делают членистоногие животные. Маленькое тельце хайкоуихтиса было лишено плавников, но зато у животного были глаза, жабры и головной мозг, что делало его самым продвинутым обитателем кембрийских морей.
-По-видимому, хайкоуихтисы жили крупными стаями из нескольких сотен особей, что помогало им спасаться от хищников. Судя по небольшим размерам и своеобразной форме тела, плавали хайкоуихтисы плохо. В основном они держались у морского дна, где собирали мелкие частицы пищи."
+text = "Диногоргон жил в лесах и редколесьях поодиночке или стайно. Диногоргоны могли питаться дицинодонами или парейазаврами. Возможно, был теплокровным.
+Череп высокий, с костными утолщениями над глазами. Крупные резцы (5 пар) и огромные саблевидные клыки, послеклыковых зубов практически нет (4 пары на верхней челюсти). Все зубы несут пиловидную зазубренность.
+Длина передней части черепа (от ноздрей до орбит) 26 см, общая длина — до 45 см и более, длина животного до 3 м. Хищник, охотник за парейазаврами и дицинодонтами. "
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]

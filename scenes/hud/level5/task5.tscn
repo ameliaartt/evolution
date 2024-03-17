@@ -34,34 +34,34 @@ anchor_right = 0.5
 offset_left = -859.0
 offset_top = 236.0
 offset_right = 794.0
-offset_bottom = 330.0
+offset_bottom = 480.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_1fpmq")
 theme_override_font_sizes/font_size = 40
 
 [node name="Button" type="Button" parent="."]
-offset_left = 661.0
-offset_top = 386.0
-offset_right = 1154.0
-offset_bottom = 477.0
+offset_left = 664.0
+offset_top = 528.0
+offset_right = 1157.0
+offset_bottom = 619.0
 theme_override_fonts/font = ExtResource("2_1fpmq")
 theme_override_font_sizes/font_size = 35
 text = "1"
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 663.0
-offset_top = 532.0
-offset_right = 1156.0
-offset_bottom = 623.0
+offset_left = 664.0
+offset_top = 656.0
+offset_right = 1157.0
+offset_bottom = 747.0
 theme_override_fonts/font = ExtResource("2_1fpmq")
 theme_override_font_sizes/font_size = 35
 text = "2"
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 663.0
-offset_top = 696.0
-offset_right = 1156.0
-offset_bottom = 787.0
+offset_left = 664.0
+offset_top = 808.0
+offset_right = 1157.0
+offset_bottom = 899.0
 theme_override_fonts/font = ExtResource("2_1fpmq")
 theme_override_font_sizes/font_size = 35
 text = "3"

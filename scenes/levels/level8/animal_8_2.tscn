@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://diswrr0tyxn47"]
+
+[ext_resource type="Script" path="res://scenes/levels/level8/animal_8_1.gd" id="1_gtu70"]
+[ext_resource type="Texture2D" uid="uid://bwna48n42g4te" path="res://assets/sprites/animals/animal8_2.png" id="2_eoon7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hbua5"]
+radius = 14.75
+height = 59.0
+
+[node name="animal8_2" type="CharacterBody2D"]
+scale = Vector2(4, 4)
+collision_layer = 2
+script = ExtResource("1_gtu70")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, -3)
+scale = Vector2(0.262034, 0.22022)
+texture = ExtResource("2_eoon7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.25, -0.75)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_hbua5")

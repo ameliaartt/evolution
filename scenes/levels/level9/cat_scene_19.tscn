@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr0gnx14suks3"]
+
+[ext_resource type="Script" path="res://scenes/levels/level9/cat_scene_19.gd" id="1_sunfj"]
+[ext_resource type="Texture2D" uid="uid://byhv226m77eue" path="res://assets/sprites/catscene/catsheen19.png" id="2_vbrud"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_j1wit"]
+
+[node name="cat_scene19" type="Node"]
+script = ExtResource("1_sunfj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 80
+
+[node name="HBoxContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_vbrud")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_j1wit")
+theme_override_font_sizes/font_size = 66
+text = "Брахиозавр"
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_j1wit")
+theme_override_font_sizes/font_size = 33
+text = "Брахиозавр считается растительноядным животным, обрезавшим или щипавшим листья деревьев на высоте до 9 м от земли. Зубы мощные, ложковидные. У брахиозавра был очень маленький мозг и потому ученые полагают, что он был не очень-то смышленым. Детенышу брахиозавра, вероятно, требовалось не менее 10 лет, чтобы достичь размеров взрослой особи, которые, возможно, жили до 70 лет.
+Эксперты полагают, что брахиозавр не мог бегать , поэтому его размер мог заставить таких свирепых хищников, как аллозавр, подумать, что динозавр слишком велик, чтобы его можно было уничтожить."
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_j1wit")
+theme_override_font_sizes/font_size = 48
+text = "Продолжить
+"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

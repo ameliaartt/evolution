@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://2ojgicxc8udc"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/animal3_1.gd" id="1_0t2oa"]
-[ext_resource type="Texture2D" uid="uid://dwptv8soe3sir" path="res://assets/sprites/animals/IMG_20231124_185912_033.png" id="2_k6d7j"]
+[ext_resource type="Texture2D" uid="uid://byf5o2lqdcsvk" path="res://assets/sprites/animals/animal3_1.png" id="2_hshmr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1pbo3"]
 radius = 9.25
@@ -13,11 +13,11 @@ collision_layer = 2
 script = ExtResource("1_0t2oa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -3.57628e-07)
-scale = Vector2(0.163369, 0.224629)
-texture = ExtResource("2_k6d7j")
+position = Vector2(-0.25, 2.5)
+scale = Vector2(0.260411, 0.202395)
+texture = ExtResource("2_hshmr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.75, -0.5)
+position = Vector2(0, 0.75)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_1pbo3")
