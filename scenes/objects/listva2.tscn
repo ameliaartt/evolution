@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1l05slocvdum"]
+
+[ext_resource type="Texture2D" uid="uid://bo6qchotpbpdr" path="res://assets/sprites/animals/listva2.png" id="1_yrs3b"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-54.2499, -86.2501)
+scale = Vector2(1.07227, 1.14258)
+texture = ExtResource("1_yrs3b")

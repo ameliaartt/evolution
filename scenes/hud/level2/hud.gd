@@ -27,4 +27,5 @@ func show_level_complete_hud(food_count):
 func _on_hide_button_pressed():
 	if Tasks.level < 3:
 		Tasks.level = 3
+	Tasks.level2 = 1
 	get_tree().change_scene_to_file("res://scenes/levels/level3/cat_scene_6.tscn")

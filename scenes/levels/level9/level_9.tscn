@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b7lyqii78fgri"]
+[gd_scene load_steps=23 format=3 uid="uid://b7lyqii78fgri"]
 
 [ext_resource type="Script" path="res://scenes/levels/level9/level_9.gd" id="1_hna84"]
 [ext_resource type="Texture2D" uid="uid://d3wpbjhq33gew" path="res://assets/tiles/level_2/photo_2024-02-04_18-58-29.jpg" id="1_iaj02"]
@@ -13,6 +13,9 @@
 [ext_resource type="Script" path="res://scenes/hud/level9/task_9_3.gd" id="10_m8eq5"]
 [ext_resource type="Script" path="res://scenes/hud/level9/task_9_4.gd" id="11_wjtrf"]
 [ext_resource type="Script" path="res://scenes/hud/level9/task_9_5.gd" id="12_wnff3"]
+[ext_resource type="PackedScene" uid="uid://bgpb0f26dch8k" path="res://scenes/hunters_objects/hunter9.tscn" id="14_1pgij"]
+[ext_resource type="PackedScene" uid="uid://wmpey0wams75" path="res://scenes/objects/cust3.tscn" id="15_m54gm"]
+[ext_resource type="PackedScene" uid="uid://bnqobhnawlth7" path="res://scenes/objects/cust2.tscn" id="16_tqi7n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k75r6"]
 texture = ExtResource("1_iaj02")
@@ -214,6 +217,47 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestArea5"]
 position = Vector2(-22, -30)
 shape = SubResource("RectangleShape2D_uge0o")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("14_1pgij")]
+position = Vector2(2421, 1199)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("14_1pgij")]
+position = Vector2(3564, 1176)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("14_1pgij")]
+position = Vector2(3937, 2460)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("14_1pgij")]
+position = Vector2(3909, 3903)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("14_1pgij")]
+position = Vector2(2628, 2987)
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="Node2D" parent="Decoration" instance=ExtResource("15_m54gm")]
+position = Vector2(323, 1470)
+
+[node name="Node2D8" parent="Decoration" instance=ExtResource("16_tqi7n")]
+position = Vector2(2717, 1906)
+
+[node name="Node2D9" parent="Decoration" instance=ExtResource("16_tqi7n")]
+position = Vector2(334, 2220)
+
+[node name="Node2D10" parent="Decoration" instance=ExtResource("16_tqi7n")]
+position = Vector2(329, 2972)
+
+[node name="Node2D11" parent="Decoration" instance=ExtResource("16_tqi7n")]
+position = Vector2(3145, 2967)
+
+[node name="Node2D2" parent="Decoration" instance=ExtResource("15_m54gm")]
+position = Vector2(4029, 2983)
+
+[node name="Node2D3" parent="Decoration" instance=ExtResource("15_m54gm")]
+position = Vector2(3144, 1903)
+
+[node name="Node2D4" parent="Decoration" instance=ExtResource("15_m54gm")]
+position = Vector2(4005, 880)
 
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
 [connection signal="body_entered" from="TestArea" to="." method="_on_test_area_body_entered"]

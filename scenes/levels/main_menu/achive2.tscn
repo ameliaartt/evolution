@@ -1,0 +1,209 @@
+[gd_scene load_steps=8 format=3 uid="uid://deb2o1ardtjoe"]
+
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_51gpp"]
+[ext_resource type="Script" path="res://scenes/levels/main_menu/achive2.gd" id="1_c3xvd"]
+[ext_resource type="Texture2D" uid="uid://bc6k0wyelya4h" path="res://assets/sprites/animals/animal6_2.png" id="2_tl0l4"]
+[ext_resource type="Texture2D" uid="uid://h01ewcqf7swj" path="res://assets/sprites/animals/animal7.png" id="3_o87lq"]
+[ext_resource type="Texture2D" uid="uid://b8guxahvege87" path="res://assets/sprites/animals/animal8_1.png" id="4_uk8pu"]
+[ext_resource type="Texture2D" uid="uid://bwna48n42g4te" path="res://assets/sprites/animals/animal8_2.png" id="5_rv3ky"]
+[ext_resource type="Texture2D" uid="uid://cg8e2y6ufkm1k" path="res://assets/sprites/animals/animal9.png" id="6_c8bfo"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c3xvd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1088.0
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 448.0
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 408.0
+offset_right = 448.0
+offset_bottom = 512.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 1408.0
+offset_top = 64.0
+offset_right = 1856.0
+offset_bottom = 448.0
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = 1408.0
+offset_top = 408.0
+offset_right = 1856.0
+offset_bottom = 512.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+offset_left = 512.0
+offset_top = 64.0
+offset_right = 896.0
+offset_bottom = 448.0
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 64.0
+offset_right = 1344.0
+offset_bottom = 448.0
+
+[node name="ColorRect8" type="ColorRect" parent="."]
+offset_left = 512.0
+offset_top = 408.0
+offset_right = 896.0
+offset_bottom = 512.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 408.0
+offset_right = 1344.0
+offset_bottom = 512.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="."]
+offset_left = 64.0
+offset_top = 576.0
+offset_right = 448.0
+offset_bottom = 960.0
+
+[node name="ColorRect11" type="ColorRect" parent="."]
+offset_left = 64.0
+offset_top = 920.0
+offset_right = 448.0
+offset_bottom = 1024.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 896.0
+offset_right = 960.0
+offset_bottom = 1024.0
+theme_override_fonts/font = ExtResource("1_51gpp")
+theme_override_font_sizes/font_size = 35
+text = "Назад"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(261, 231)
+scale = Vector2(1.32812, 1.27539)
+texture = ExtResource("2_tl0l4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(707.5, 239)
+scale = Vector2(1.50391, 1.35156)
+texture = ExtResource("3_o87lq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1157, 254)
+scale = Vector2(1.56641, 1.38477)
+texture = ExtResource("4_uk8pu")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1637, 258)
+scale = Vector2(1.85156, 1.6875)
+texture = ExtResource("5_rv3ky")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(245, 764)
+scale = Vector2(1.60352, 1.42578)
+texture = ExtResource("6_c8bfo")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 430.0
+offset_right = 430.0
+offset_bottom = 512.0
+theme_override_fonts/font = ExtResource("1_51gpp")
+theme_override_font_sizes/font_size = 40
+text = "Меганевр"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 593.0
+offset_top = 434.0
+offset_right = 875.0
+offset_bottom = 516.0
+theme_override_fonts/font = ExtResource("1_51gpp")
+theme_override_font_sizes/font_size = 40
+text = "Листозавр"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1047.0
+offset_top = 433.0
+offset_right = 1329.0
+offset_bottom = 515.0
+theme_override_fonts/font = ExtResource("1_51gpp")
+theme_override_font_sizes/font_size = 40
+text = "Эораптор"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 1501.0
+offset_top = 431.0
+offset_right = 1783.0
+offset_bottom = 513.0
+theme_override_fonts/font = ExtResource("1_51gpp")
+theme_override_font_sizes/font_size = 40
+text = "Диногоргон"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 943.0
+offset_right = 410.0
+offset_bottom = 1025.0
+theme_override_fonts/font = ExtResource("1_51gpp")
+theme_override_font_sizes/font_size = 40
+text = "Брахиозавр"
+
+[node name="ColorRect16" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 62.0
+offset_right = 448.0
+offset_bottom = 512.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 64.0
+offset_right = 1345.0
+offset_bottom = 514.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="."]
+offset_left = 64.0
+offset_top = 576.0
+offset_right = 449.0
+offset_bottom = 1026.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="ColorRect21" type="ColorRect" parent="."]
+offset_left = 511.0
+offset_top = 62.0
+offset_right = 896.0
+offset_bottom = 512.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="ColorRect22" type="ColorRect" parent="."]
+offset_left = 1408.0
+offset_top = 64.0
+offset_right = 1856.0
+offset_bottom = 512.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bq0uqxvff5cfx"]
+[gd_scene load_steps=21 format=3 uid="uid://bq0uqxvff5cfx"]
 
 [ext_resource type="Script" path="res://scenes/levels/level6/level_6_2.gd" id="1_fiu8e"]
 [ext_resource type="Texture2D" uid="uid://b1tan5h5y52j7" path="res://assets/tiles/level_2/tile.png" id="2_51yvd"]
@@ -12,6 +12,8 @@
 [ext_resource type="Script" path="res://scenes/hud/level6/task6_22.gd" id="8_is8qs"]
 [ext_resource type="Script" path="res://scenes/hud/level6/task6_3.gd" id="9_dfprg"]
 [ext_resource type="Script" path="res://scenes/hud/level6/task6_4.gd" id="10_qilmf"]
+[ext_resource type="PackedScene" uid="uid://uwhcpykyvkva" path="res://scenes/hunters_objects/hunter6.tscn" id="13_nyrt2"]
+[ext_resource type="PackedScene" uid="uid://c4xm2yjc4048v" path="res://scenes/objects/cust.tscn" id="14_rq05k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpfqc"]
 texture = ExtResource("2_51yvd")
@@ -47,6 +49,10 @@ size = Vector2(232, 255)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjg1l"]
 size = Vector2(261, 242)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xppfj"]
+radius = 119.0
+height = 486.0
 
 [node name="Level6_2" type="Node2D"]
 script = ExtResource("1_fiu8e")
@@ -215,6 +221,80 @@ collision_mask = 2
 position = Vector2(0, -20)
 shape = SubResource("RectangleShape2D_bjg1l")
 
+[node name="Hunter" type="Area2D" parent="."]
+position = Vector2(380, 3905)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hunter"]
+position = Vector2(130, 42)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xppfj")
+
+[node name="CharacterBody2D" parent="Hunter" instance=ExtResource("13_nyrt2")]
+position = Vector2(131, 40)
+
+[node name="Hunter2" type="Area2D" parent="."]
+position = Vector2(3082, 1040)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hunter2"]
+position = Vector2(268, -147)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xppfj")
+
+[node name="CharacterBody2D" parent="Hunter2" instance=ExtResource("13_nyrt2")]
+position = Vector2(272, -151)
+
+[node name="Hunter3" type="Area2D" parent="."]
+position = Vector2(250, 1227)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hunter3"]
+position = Vector2(268, -147)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xppfj")
+
+[node name="CharacterBody2D" parent="Hunter3" instance=ExtResource("13_nyrt2")]
+position = Vector2(272, -151)
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="Node2D" parent="Decoration" instance=ExtResource("14_rq05k")]
+position = Vector2(1832, 1480)
+
+[node name="Node2D2" parent="Decoration" instance=ExtResource("14_rq05k")]
+position = Vector2(2737, 397)
+
+[node name="Node2D3" parent="Decoration" instance=ExtResource("14_rq05k")]
+position = Vector2(1432, 1455)
+
+[node name="Node2D4" parent="Decoration" instance=ExtResource("14_rq05k")]
+position = Vector2(1698, 340)
+
+[node name="Node2D5" parent="Decoration" instance=ExtResource("14_rq05k")]
+position = Vector2(1692, 2486)
+
+[node name="Node2D6" parent="Decoration" instance=ExtResource("14_rq05k")]
+position = Vector2(1429, 2931)
+
+[node name="Node2D7" parent="Decoration" instance=ExtResource("14_rq05k")]
+position = Vector2(3261, 2486)
+
+[node name="Node2D8" parent="Decoration" instance=ExtResource("14_rq05k")]
+position = Vector2(4009, 1457)
+
+[node name="Node2D9" parent="Decoration" instance=ExtResource("14_rq05k")]
+position = Vector2(3682, 362)
+
+[node name="Node2D10" parent="Decoration" instance=ExtResource("14_rq05k")]
+position = Vector2(3990, 2971)
+
+[node name="Node2D11" parent="Decoration" instance=ExtResource("14_rq05k")]
+position = Vector2(2720, 2984)
+
+[node name="Node2D12" parent="Decoration" instance=ExtResource("14_rq05k")]
+position = Vector2(1844, 3987)
+
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
 [connection signal="body_entered" from="TestArea" to="." method="_on_test_area_body_entered"]
 [connection signal="body_entered" from="TestArea2" to="." method="_on_test_area_2_body_entered"]
@@ -223,3 +303,6 @@ shape = SubResource("RectangleShape2D_bjg1l")
 [connection signal="body_entered" from="TestArea5" to="." method="_on_test_area_5_body_entered"]
 [connection signal="body_entered" from="TestArea6" to="." method="_on_test_area_6_body_entered"]
 [connection signal="body_entered" from="TestArea7" to="." method="_on_test_area_7_body_entered"]
+[connection signal="body_entered" from="Hunter" to="." method="_on_hunter_body_entered"]
+[connection signal="body_entered" from="Hunter2" to="." method="_on_hunter_2_body_entered"]
+[connection signal="body_entered" from="Hunter3" to="." method="_on_hunter_3_body_entered"]

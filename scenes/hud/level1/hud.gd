@@ -24,5 +24,6 @@ func show_level_complete_hud():
 func _on_hide_button_pressed():
 	if Tasks.level < 2:
 		Tasks.level = 2
+	Tasks.level1 = 1
 	get_tree().change_scene_to_file("res://scenes/levels/level2/cat_scene_3.tscn")
 	pass

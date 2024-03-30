@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjfbf51jles5c"]
+
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_q00gu"]
+[ext_resource type="Script" path="res://scenes/levels/main_menu/progress.gd" id="1_r2btd"]
+[ext_resource type="PackedScene" uid="uid://hg5of0j4eh26" path="res://scenes/levels/main_menu/are_you_shure.tscn" id="3_2jrkt"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r2btd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -886.0
+offset_top = -474.0
+offset_right = 890.0
+offset_bottom = -385.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_q00gu")
+theme_override_font_sizes/font_size = 65
+text = "Тут вы можете узнать свой прогресс и сбросить его"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 320.0
+offset_right = 960.0
+offset_bottom = 704.0
+theme_override_fonts/font = ExtResource("1_q00gu")
+theme_override_font_sizes/font_size = 50
+
+[node name="sbross" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 256.0
+offset_right = 1728.0
+offset_bottom = 384.0
+theme_override_fonts/font = ExtResource("1_q00gu")
+theme_override_font_sizes/font_size = 43
+text = "Сбросить прогресс"
+
+[node name="achive" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 512.0
+offset_right = 1728.0
+offset_bottom = 640.0
+theme_override_fonts/font = ExtResource("1_q00gu")
+theme_override_font_sizes/font_size = 43
+text = "Посмотреть персонажей"
+
+[node name="back_to_menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 768.0
+offset_right = 1728.0
+offset_bottom = 896.0
+theme_override_fonts/font = ExtResource("1_q00gu")
+theme_override_font_sizes/font_size = 43
+text = "Вернуться в меню"
+
+[node name="Control" parent="." instance=ExtResource("3_2jrkt")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.489
+anchor_bottom = 0.953
+offset_right = -0.880066
+offset_bottom = 52.7599
+
+[connection signal="pressed" from="sbross" to="." method="_on_sbross_pressed"]
+[connection signal="pressed" from="achive" to="." method="_on_achive_pressed"]
+[connection signal="pressed" from="back_to_menu" to="." method="_on_back_to_menu_pressed"]

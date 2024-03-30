@@ -11,10 +11,13 @@ func update_food(food_count):
 func delete_food(food):
 	food.queue_free()
 	$Pikaia.food_count += 1
+	Tasks.food_4 += 1
+	Tasks.all_food += 1
 	update_food($Pikaia.food_count)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Tasks.food_4 = 0
 	for food in $Foods.get_children(false):
 		food.get_node("CollisionShape2D").scale = Vector2(3.0, 3.0)
 		food.get_node("Sprite2D").texture = load("res://assets/food/food2.png")

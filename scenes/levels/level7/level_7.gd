@@ -9,11 +9,14 @@ func update_food(food_count):
 
 func delete_food(food):
 	food.queue_free()
-	$Pikaia.food_count += 1
-	update_food($Pikaia.food_count)
+	$animal7.food_count += 1
+	Tasks.food_7 += 1
+	Tasks.all_food += 1
+	update_food($animal7.food_count)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Tasks.food_7 = 0
 	for food in $Foods.get_children(false):
 		food.get_node("CollisionShape2D").scale = Vector2(3.0, 3.0)
 		food.get_node("Sprite2D").texture = load("res://assets/food/food2.png")
@@ -21,7 +24,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func show_completion_hud():
-	$HUD.show_level_complete_hud($Pikaia.food_count)
+	$HUD.show_level_complete_hud($animal7.food_count)
 	$HUD/FoodLabel.visible = false
 	
 func show_task():

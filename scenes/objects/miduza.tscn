@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk5hxe4xehsvq"]
+
+[ext_resource type="Texture2D" uid="uid://cakxm81dj4dnr" path="res://assets/sprites/animals/meduza.png" id="1_amwdr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t136n"]
+radius = 72.0625
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(26, -5.00001)
+scale = Vector2(1.17773, 1.0918)
+texture = ExtResource("1_amwdr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -67)
+shape = SubResource("CircleShape2D_t136n")

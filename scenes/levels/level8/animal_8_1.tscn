@@ -1,7 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfp6wol8vx7t2"]
+[gd_scene load_steps=6 format=3 uid="uid://cfp6wol8vx7t2"]
 
 [ext_resource type="Script" path="res://scenes/levels/level8/animal_8_1.gd" id="1_7g3nx"]
 [ext_resource type="Texture2D" uid="uid://b8guxahvege87" path="res://assets/sprites/animals/animal8_1.png" id="2_ugtjs"]
+[ext_resource type="Texture2D" uid="uid://bo8whg0m2k3ki" path="res://assets/sprites/animals/animal8.1_2.png" id="3_indoh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_245ym"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ugtjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_indoh")
+}],
+"loop": true,
+"name": &"go",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ugtjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_indoh")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hbua5"]
 radius = 14.5
@@ -12,10 +38,11 @@ scale = Vector2(4, 4)
 collision_layer = 2
 script = ExtResource("1_7g3nx")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-0.25, -8)
-scale = Vector2(0.203755, 0.168955)
-texture = ExtResource("2_ugtjs")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.937501, -8.1875)
+scale = Vector2(0.218262, 0.164551)
+sprite_frames = SubResource("SpriteFrames_245ym")
+animation = &"go"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.75, -7.75)

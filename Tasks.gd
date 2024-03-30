@@ -2,10 +2,26 @@ extends Node
 
 var all_food = 0
 var food_2 = 0
+var food_4 = 0
 var food_5 = 0
+var food_6 = 0
 var food_7 = 0
 var food_8 = 0
+
 var level = 1
+
+var level1 = 0
+var level2 = 0
+var level3_1 = 0
+var level3_2 = 0
+var level4 = 0
+var level5 = 0
+var level6_1 = 0
+var level6_2 = 0
+var level7 = 0
+var level8_1 = 0
+var level8_2 = 0
+var level9 = 0
 
 var task1_lvl3 = "Когда появились первые членистоногие животные?: 
 	1)Эдиакарская биота.2)Кембрийский период. 3)Ордовикский период."
@@ -404,3 +420,62 @@ var task4_3_lvl9 = "Обитали ли теплокровные покрыты 
 	2)нет.
 	3)да, были большие."
 #правильный ответ 1
+
+var config
+var path_to_save_file = "user://game.cfg"
+var section_name = "game"
+
+func _ready():
+	load_game()
+	pass
+
+
+func save_game():
+	config.set_value(section_name, "all_food", all_food)
+	config.set_value(section_name, "food_2", food_2)
+	config.set_value(section_name, "food_4", food_4)
+	config.set_value(section_name, "food_5", food_5)
+	config.set_value(section_name, "food_6", food_6)
+	config.set_value(section_name, "food_7", food_7)
+	config.set_value(section_name, "food_8", food_8)
+	config.set_value(section_name, "level", level)
+	config.set_value(section_name, "level1", level1)
+	config.set_value(section_name, "level2", level2)
+	config.set_value(section_name, "level3_1", level3_1)
+	config.set_value(section_name, "level3_2", level3_2)
+	config.set_value(section_name, "level4", level4)
+	config.set_value(section_name, "level5", level5)
+	config.set_value(section_name, "level6_1", level6_1)
+	config.set_value(section_name, "level6_2", level6_2)
+	config.set_value(section_name, "level7", level7)
+	config.set_value(section_name, "level8_1", level8_1)
+	config.set_value(section_name, "level8_2", level8_2)
+	config.set_value(section_name, "level9", level9)
+	config.save(path_to_save_file)
+	pass
+
+
+func load_game():
+	config = ConfigFile.new()
+	config.load(path_to_save_file)
+	all_food = config.get_value(section_name, "all_food", 0)
+	food_2 = config.get_value(section_name, "food_2", 0)
+	food_4 = config.get_value(section_name, "food_4", 0)
+	food_5 = config.get_value(section_name, "food_5", 0)
+	food_6 = config.get_value(section_name, "food_6", 0)
+	food_7 = config.get_value(section_name, "food_7", 0)
+	food_8 = config.get_value(section_name, "food_8", 0)
+	level = config.get_value(section_name, "level", 1)
+	level1 = config.get_value(section_name, "level1", 0)
+	level2 = config.get_value(section_name, "level2", 0)
+	level3_1 = config.get_value(section_name, "level3_1", 0)
+	level3_2 = config.get_value(section_name, "level3_2", 0)
+	level4 = config.get_value(section_name, "level4", 0)
+	level5 = config.get_value(section_name, "level5", 0)
+	level6_1 = config.get_value(section_name, "level6_1", 0)
+	level6_2 = config.get_value(section_name, "level6_2", 0)
+	level7 = config.get_value(section_name, "level7", 0)
+	level8_1 = config.get_value(section_name, "level8_1", 0)
+	level8_2 = config.get_value(section_name, "level8_2", 0)
+	level9 = config.get_value(section_name, "level9", 0)
+	pass

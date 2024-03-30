@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://em7hby5cfl6m"]
+[gd_scene load_steps=21 format=3 uid="uid://em7hby5cfl6m"]
 
 [ext_resource type="Script" path="res://scenes/levels/level4/level_4_1.gd" id="1_jcylb"]
 [ext_resource type="Texture2D" uid="uid://b1tan5h5y52j7" path="res://assets/tiles/level_2/tile.png" id="2_dsot6"]
@@ -11,6 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://cnbaamukc8j1q" path="res://scenes/hud/level4/hud4.tscn" id="7_rh18r"]
 [ext_resource type="Script" path="res://scenes/hud/level4/task_4_3.gd" id="8_7ps8j"]
 [ext_resource type="Script" path="res://scenes/hud/level4/task_4_4.gd" id="9_pgx1l"]
+[ext_resource type="PackedScene" uid="uid://ccuaffq3i06s2" path="res://scenes/objects/listva.tscn" id="12_b2d6r"]
+[ext_resource type="PackedScene" uid="uid://d1l05slocvdum" path="res://scenes/objects/listva2.tscn" id="13_exhep"]
+[ext_resource type="PackedScene" uid="uid://dk5hxe4xehsvq" path="res://scenes/objects/miduza.tscn" id="14_w0ety"]
+[ext_resource type="PackedScene" uid="uid://k58h4ms1wjbl" path="res://scenes/objects/miduza2.tscn" id="15_eho0m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpfqc"]
 texture = ExtResource("2_dsot6")
@@ -186,6 +190,68 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestArea4"]
 position = Vector2(-220, -9)
 shape = SubResource("RectangleShape2D_k5gu7")
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="Node2D" parent="Decoration" instance=ExtResource("12_b2d6r")]
+position = Vector2(2663, 1149)
+
+[node name="Node2D2" parent="Decoration" instance=ExtResource("12_b2d6r")]
+position = Vector2(3771, 376)
+
+[node name="Node2D3" parent="Decoration" instance=ExtResource("13_exhep")]
+position = Vector2(2590, 1222)
+
+[node name="Node2D4" parent="Decoration" instance=ExtResource("13_exhep")]
+position = Vector2(3690, 421)
+
+[node name="Node2D5" parent="Decoration" instance=ExtResource("14_w0ety")]
+position = Vector2(2665, 433)
+
+[node name="Node2D6" parent="Decoration" instance=ExtResource("15_eho0m")]
+position = Vector2(2883, 507)
+
+[node name="Node2D7" parent="Decoration" instance=ExtResource("14_w0ety")]
+position = Vector2(2809, 3775)
+
+[node name="Node2D8" parent="Decoration" instance=ExtResource("14_w0ety")]
+position = Vector2(3059, 3866)
+
+[node name="Node2D9" parent="Decoration" instance=ExtResource("13_exhep")]
+position = Vector2(2744, 4046)
+
+[node name="Node2D10" parent="Decoration" instance=ExtResource("13_exhep")]
+position = Vector2(2584, 4057)
+
+[node name="Node2D11" parent="Decoration" instance=ExtResource("13_exhep")]
+position = Vector2(4095, 3368)
+
+[node name="Node2D12" parent="Decoration" instance=ExtResource("13_exhep")]
+position = Vector2(2755, 3266)
+
+[node name="Node2D13" parent="Decoration" instance=ExtResource("13_exhep")]
+position = Vector2(619, 4051)
+
+[node name="Node2D14" parent="Decoration" instance=ExtResource("12_b2d6r")]
+position = Vector2(1620, 3959)
+
+[node name="Node2D15" parent="Decoration" instance=ExtResource("15_eho0m")]
+position = Vector2(1394, 3406)
+
+[node name="Node2D16" parent="Decoration" instance=ExtResource("12_b2d6r")]
+position = Vector2(317, 3969)
+
+[node name="Node2D17" parent="Decoration" instance=ExtResource("12_b2d6r")]
+position = Vector2(616, 3174)
+
+[node name="Node2D18" parent="Decoration" instance=ExtResource("12_b2d6r")]
+position = Vector2(1593, 1150)
+
+[node name="Node2D19" parent="Decoration" instance=ExtResource("12_b2d6r")]
+position = Vector2(589, 398)
+
+[node name="Node2D20" parent="Decoration" instance=ExtResource("14_w0ety")]
+position = Vector2(1271, 743)
 
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
 [connection signal="body_entered" from="TestArea" to="." method="_on_test_area_body_entered"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgpb0f26dch8k"]
+
+[ext_resource type="Script" path="res://scenes/hunters_objects/hunter7.gd" id="1_gfwju"]
+[ext_resource type="Texture2D" uid="uid://bedykvgrk0nio" path="res://assets/sprites/animals/hunter9.png" id="2_ttgdd"]
+[ext_resource type="Texture2D" uid="uid://d107roalbwc8h" path="res://assets/sprites/animals/hunter9_2.png" id="3_s4ejh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyn4h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ttgdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s4ejh")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xe7xx"]
+radius = 78.9999
+height = 296.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_86ldx"]
+radius = 98.0
+height = 322.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_gfwju")
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+position = Vector2(-32.5, -44)
+scale = Vector2(1.25391, 1.19531)
+sprite_frames = SubResource("SpriteFrames_qyn4h")
+animation = &"run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+position = Vector2(-33, -74)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xe7xx")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-36, -62)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_86ldx")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

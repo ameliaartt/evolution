@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp3hff5csq04i"]
+
+[ext_resource type="Texture2D" uid="uid://bbcdhbjeyy7s3" path="res://assets/sprites/animals/cust4.png" id="1_ggbmq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_auu1i"]
+size = Vector2(148, 185)
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(24, -42)
+scale = Vector2(1.18945, 1.20898)
+texture = ExtResource("1_ggbmq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15, -7)
+shape = SubResource("RectangleShape2D_auu1i")

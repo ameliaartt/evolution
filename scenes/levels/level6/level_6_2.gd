@@ -13,6 +13,7 @@ func update_food(food_count):
 func delete_food(food):
 	food.queue_free()
 	$Pikaia.food_count += 1
+	Tasks.all_food += 1
 	update_food($Pikaia.food_count)
 
 # Called when the node enters the scene tree for the first time.
@@ -92,5 +93,20 @@ func _on_test_area_6_body_entered(body):
 
 
 func _on_test_area_7_body_entered(body):
+	get_tree().change_scene_to_file("res://scenes/levels/main_menu/end.tscn")
+	pass # Replace with function body.
+
+
+func _on_hunter_body_entered(body):
+	get_tree().change_scene_to_file("res://scenes/levels/main_menu/end.tscn")
+	pass # Replace with function body.
+
+
+func _on_hunter_2_body_entered(body):
+	get_tree().change_scene_to_file("res://scenes/levels/main_menu/end.tscn")
+	pass # Replace with function body.
+
+
+func _on_hunter_3_body_entered(body):
 	get_tree().change_scene_to_file("res://scenes/levels/main_menu/end.tscn")
 	pass # Replace with function body.

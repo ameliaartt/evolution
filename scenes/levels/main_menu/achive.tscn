@@ -1,0 +1,291 @@
+[gd_scene load_steps=10 format=3 uid="uid://5bvxemlwpwn0"]
+
+[ext_resource type="Texture2D" uid="uid://duwirlbqfm7oq" path="res://assets/sprites/animals/animal1.png" id="1_65plv"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_81651"]
+[ext_resource type="Script" path="res://scenes/levels/main_menu/achive.gd" id="1_q3wp5"]
+[ext_resource type="Texture2D" uid="uid://dh1qyvxtn72to" path="res://assets/sprites/animals/animal2.png" id="3_mb1ke"]
+[ext_resource type="Texture2D" uid="uid://byf5o2lqdcsvk" path="res://assets/sprites/animals/animal3_1.png" id="4_hkodn"]
+[ext_resource type="Texture2D" uid="uid://dannhr3ho6gf4" path="res://assets/sprites/animals/animal3_2.png" id="5_dg30i"]
+[ext_resource type="Texture2D" uid="uid://c0trpfegatk4o" path="res://assets/sprites/animals/animal4.png" id="6_3uc8s"]
+[ext_resource type="Texture2D" uid="uid://bdywlq1mkacof" path="res://assets/sprites/animals/animal5.png" id="7_02nl2"]
+[ext_resource type="Texture2D" uid="uid://di14figqblymv" path="res://assets/sprites/animals/animal6_1.png" id="8_usnr0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q3wp5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1088.0
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 448.0
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 408.0
+offset_right = 448.0
+offset_bottom = 512.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 1408.0
+offset_top = 64.0
+offset_right = 1856.0
+offset_bottom = 448.0
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = 1408.0
+offset_top = 408.0
+offset_right = 1856.0
+offset_bottom = 512.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+offset_left = 512.0
+offset_top = 64.0
+offset_right = 896.0
+offset_bottom = 448.0
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 64.0
+offset_right = 1344.0
+offset_bottom = 448.0
+
+[node name="ColorRect8" type="ColorRect" parent="."]
+offset_left = 512.0
+offset_top = 408.0
+offset_right = 896.0
+offset_bottom = 512.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 408.0
+offset_right = 1344.0
+offset_bottom = 512.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="."]
+offset_left = 64.0
+offset_top = 576.0
+offset_right = 448.0
+offset_bottom = 960.0
+
+[node name="ColorRect11" type="ColorRect" parent="."]
+offset_left = 64.0
+offset_top = 920.0
+offset_right = 448.0
+offset_bottom = 1024.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="."]
+offset_left = 512.0
+offset_top = 576.0
+offset_right = 896.0
+offset_bottom = 960.0
+
+[node name="ColorRect13" type="ColorRect" parent="."]
+offset_left = 512.0
+offset_top = 920.0
+offset_right = 896.0
+offset_bottom = 1024.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 576.0
+offset_right = 1344.0
+offset_bottom = 960.0
+
+[node name="ColorRect15" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 920.0
+offset_right = 1344.0
+offset_bottom = 1024.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1408.0
+offset_top = 600.0
+offset_right = 1856.0
+offset_bottom = 728.0
+theme_override_fonts/font = ExtResource("1_81651")
+theme_override_font_sizes/font_size = 50
+text = "Дальше"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1408.0
+offset_top = 848.0
+offset_right = 1856.0
+offset_bottom = 976.0
+theme_override_fonts/font = ExtResource("1_81651")
+theme_override_font_sizes/font_size = 35
+text = "Вернуться в меню"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(254, 242)
+scale = Vector2(1.5, 1.44141)
+texture = ExtResource("1_65plv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(710, 260)
+scale = Vector2(1.52344, 1.51562)
+texture = ExtResource("3_mb1ke")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1156, 257)
+scale = Vector2(1.51562, 1.33203)
+texture = ExtResource("4_hkodn")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1625, 270.5)
+scale = Vector2(1.75781, 1.58984)
+texture = ExtResource("5_dg30i")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(255, 754)
+scale = Vector2(1.55859, 1.35938)
+texture = ExtResource("6_3uc8s")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(706, 743)
+scale = Vector2(1.67969, 1.58203)
+texture = ExtResource("7_02nl2")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(1162, 756)
+rotation = 3.14159
+scale = Vector2(1.62679, 1.56043)
+texture = ExtResource("8_usnr0")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 433.0
+offset_right = 408.0
+offset_bottom = 515.0
+theme_override_fonts/font = ExtResource("1_81651")
+theme_override_font_sizes/font_size = 40
+text = "Дикинсонии"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 618.0
+offset_top = 432.0
+offset_right = 900.0
+offset_bottom = 514.0
+theme_override_fonts/font = ExtResource("1_81651")
+theme_override_font_sizes/font_size = 40
+text = "Пикайя"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1015.0
+offset_top = 433.0
+offset_right = 1297.0
+offset_bottom = 515.0
+theme_override_fonts/font = ExtResource("1_81651")
+theme_override_font_sizes/font_size = 40
+text = "Хайкоуихтис"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 1518.0
+offset_top = 433.0
+offset_right = 1800.0
+offset_bottom = 515.0
+theme_override_fonts/font = ExtResource("1_81651")
+theme_override_font_sizes/font_size = 40
+text = "Конодонта"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 155.0
+offset_top = 946.0
+offset_right = 437.0
+offset_bottom = 1028.0
+theme_override_fonts/font = ExtResource("1_81651")
+theme_override_font_sizes/font_size = 40
+text = "Акантода"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 609.0
+offset_top = 946.0
+offset_right = 891.0
+offset_bottom = 1028.0
+theme_override_fonts/font = ExtResource("1_81651")
+theme_override_font_sizes/font_size = 40
+text = "Трилобит"
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 1047.0
+offset_top = 946.0
+offset_right = 1329.0
+offset_bottom = 1028.0
+theme_override_fonts/font = ExtResource("1_81651")
+theme_override_font_sizes/font_size = 40
+text = "Синапсид"
+
+[node name="ColorRect16" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 62.0
+offset_right = 448.0
+offset_bottom = 512.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 576.0
+offset_right = 1345.0
+offset_bottom = 1026.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 64.0
+offset_right = 1345.0
+offset_bottom = 514.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="."]
+offset_left = 64.0
+offset_top = 576.0
+offset_right = 449.0
+offset_bottom = 1026.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="ColorRect21" type="ColorRect" parent="."]
+offset_left = 511.0
+offset_top = 62.0
+offset_right = 896.0
+offset_bottom = 512.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="."]
+offset_left = 512.0
+offset_top = 576.0
+offset_right = 897.0
+offset_bottom = 1026.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="ColorRect22" type="ColorRect" parent="."]
+offset_left = 1408.0
+offset_top = 64.0
+offset_right = 1856.0
+offset_bottom = 512.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

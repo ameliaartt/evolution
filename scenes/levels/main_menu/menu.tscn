@@ -22,6 +22,8 @@ color = Color(0.447059, 0.682353, 0.380392, 1)
 layout_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 100
@@ -49,7 +51,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 9
 theme_override_fonts/font = ExtResource("2_ynlmm")
 theme_override_font_sizes/font_size = 72
-text = "v1.1"
+text = "v1.3"
 
 [node name="MenuOptions" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -73,6 +75,15 @@ text = "Загрузить"
 flat = true
 alignment = 2
 
+[node name="progress" type="Button" parent="MarginContainer/HBoxContainer/MenuOptions"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_ynlmm")
+theme_override_font_sizes/font_size = 72
+text = "     Прогресс"
+flat = true
+alignment = 2
+
 [node name="ExitGameButton" type="Button" parent="MarginContainer/HBoxContainer/MenuOptions"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ynlmm")
@@ -83,4 +94,5 @@ alignment = 2
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MenuOptions/StartGameButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MenuOptions/reitingButton" to="." method="_on_reiting_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MenuOptions/progress" to="." method="_on_progress_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MenuOptions/ExitGameButton" to="." method="_on_exit_game_button_pressed"]

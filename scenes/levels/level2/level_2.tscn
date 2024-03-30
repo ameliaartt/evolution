@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cge7bmu5wjgh3"]
+[gd_scene load_steps=11 format=3 uid="uid://cge7bmu5wjgh3"]
 
 [ext_resource type="Texture2D" uid="uid://b1tan5h5y52j7" path="res://assets/tiles/level_2/tile.png" id="1_8fv5r"]
 [ext_resource type="Script" path="res://scenes/levels/level2/level_2.gd" id="1_58bkl"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bxwboaoquym2d" path="res://scenes/levels/level1/food.tscn" id="3_wt566"]
 [ext_resource type="PackedScene" uid="uid://b0dqgdwec8gxv" path="res://scenes/hud/level2/hud.tscn" id="5_kkorm"]
 [ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/tiles/rock.png" id="6_gj0ew"]
+[ext_resource type="PackedScene" uid="uid://d1l05slocvdum" path="res://scenes/objects/listva2.tscn" id="8_niuen"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpfqc"]
 texture = ExtResource("1_8fv5r")
@@ -13,7 +14,7 @@ texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -128, -128, 128, 128, 128, 128, -128)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
@@ -125,5 +126,35 @@ shape = SubResource("RectangleShape2D_g2m3i")
 [node name="Sprite2D" type="Sprite2D" parent="ExitArea"]
 rotation = 1.5708
 texture = ExtResource("6_gj0ew")
+
+[node name="Node2D2" parent="." instance=ExtResource("8_niuen")]
+position = Vector2(3053, 969)
+
+[node name="Node2D3" parent="." instance=ExtResource("8_niuen")]
+position = Vector2(885, 2506)
+
+[node name="Node2D4" parent="." instance=ExtResource("8_niuen")]
+position = Vector2(1910, 1988)
+
+[node name="Node2D5" parent="." instance=ExtResource("8_niuen")]
+position = Vector2(3044, 1991)
+
+[node name="Node2D6" parent="." instance=ExtResource("8_niuen")]
+position = Vector2(1044, 1480)
+
+[node name="Node2D7" parent="." instance=ExtResource("8_niuen")]
+position = Vector2(3053, 969)
+
+[node name="Node2D8" parent="." instance=ExtResource("8_niuen")]
+position = Vector2(2529, 445)
+
+[node name="Node2D9" parent="." instance=ExtResource("8_niuen")]
+position = Vector2(3469, 969)
+
+[node name="Node2D10" parent="." instance=ExtResource("8_niuen")]
+position = Vector2(3195, 3528)
+
+[node name="Node2D11" parent="." instance=ExtResource("8_niuen")]
+position = Vector2(1837, 3017)
 
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]

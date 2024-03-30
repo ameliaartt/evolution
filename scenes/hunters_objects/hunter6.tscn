@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://uwhcpykyvkva"]
+
+[ext_resource type="Texture2D" uid="uid://di14figqblymv" path="res://assets/sprites/animals/animal6_1.png" id="1_vk7rr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1rthx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vk7rr")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qtcp4"]
+radius = 84.0
+height = 280.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+light_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(15, -14)
+rotation = 3.14159
+scale = Vector2(1.98924, 1.80714)
+sprite_frames = SubResource("SpriteFrames_1rthx")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_qtcp4")

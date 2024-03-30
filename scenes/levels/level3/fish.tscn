@@ -1,7 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://2ojgicxc8udc"]
+[gd_scene load_steps=5 format=3 uid="uid://2ojgicxc8udc"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/animal3_1.gd" id="1_0t2oa"]
 [ext_resource type="Texture2D" uid="uid://byf5o2lqdcsvk" path="res://assets/sprites/animals/animal3_1.png" id="2_hshmr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rxmww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hshmr")
+}],
+"loop": true,
+"name": &"go",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hshmr")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1pbo3"]
 radius = 9.25
@@ -12,10 +31,11 @@ scale = Vector2(4, 4)
 collision_layer = 2
 script = ExtResource("1_0t2oa")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-0.25, 2.5)
-scale = Vector2(0.260411, 0.202395)
-texture = ExtResource("2_hshmr")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.250004, 2.75)
+scale = Vector2(0.247559, 0.221191)
+sprite_frames = SubResource("SpriteFrames_rxmww")
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.75)
