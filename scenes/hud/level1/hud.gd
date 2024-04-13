@@ -22,6 +22,8 @@ func show_level_complete_hud():
 	$LevelCompleteLabel.set("visible_characters", -1)
 
 func _on_hide_button_pressed():
+	$button.play()
+	await $button.finished
 	if Tasks.level < 2:
 		Tasks.level = 2
 	Tasks.level1 = 1

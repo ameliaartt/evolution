@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://hg5of0j4eh26"]
+[gd_scene load_steps=4 format=3 uid="uid://hg5of0j4eh26"]
 
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_ai0ls"]
 [ext_resource type="Script" path="res://scenes/levels/main_menu/sbross2.gd" id="1_u2vu6"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="3_s42n5"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -61,6 +62,9 @@ offset_bottom = 768.0
 theme_override_fonts/font = ExtResource("1_ai0ls")
 theme_override_font_sizes/font_size = 43
 text = "Нет, не хочу"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_s42n5")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

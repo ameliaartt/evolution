@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c61ros8lgxgyv"]
+[gd_scene load_steps=4 format=3 uid="uid://c61ros8lgxgyv"]
 
 [ext_resource type="Script" path="res://scenes/hud/level6/task6.gd" id="1_nj3cq"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_3vi66"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="3_2j41b"]
 
 [node name="Task1" type="CanvasLayer"]
 script = ExtResource("1_nj3cq")
@@ -65,6 +66,9 @@ offset_bottom = 939.0
 theme_override_fonts/font = ExtResource("2_3vi66")
 theme_override_font_sizes/font_size = 35
 text = "3"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2j41b")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_3_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0dqgdwec8gxv"]
+[gd_scene load_steps=9 format=3 uid="uid://b0dqgdwec8gxv"]
 
 [ext_resource type="Script" path="res://scenes/hud/level2/hud.gd" id="1_1td6w"]
 [ext_resource type="Texture2D" uid="uid://b8c2kuno0lylu" path="res://assets/sprites/details/green_sliderUp.png" id="2_ido6m"]
@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bwdvqaggn5pe4" path="res://assets/sprites/details/green_sliderDown.png" id="3_84ej7"]
 [ext_resource type="Texture2D" uid="uid://bdvx548v0273e" path="res://assets/sprites/details/green_sliderLeft.png" id="4_pghkm"]
 [ext_resource type="Texture2D" uid="uid://cqekng5okbuky" path="res://assets/sprites/details/green_sliderRight.png" id="5_nb1iw"]
-[ext_resource type="PackedScene" uid="uid://bsdbsoi3pliqx" path="res://scenes/levels/main end/exed.tscn" id="7_ug1ug"]
+[ext_resource type="PackedScene" uid="uid://bsdbsoi3pliqx" path="res://scenes/levels/main_menu/exed.tscn" id="7_ug1ug"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="8_intrs"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_1td6w")
@@ -44,9 +45,6 @@ offset_left = 16.0
 offset_top = -1.0
 offset_right = 230.0
 offset_bottom = 81.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 16
 theme_override_fonts/font = ExtResource("2_sn6k4")
 theme_override_font_sizes/font_size = 64
 text = "Еда: "
@@ -59,9 +57,6 @@ offset_left = -1.0
 offset_top = 215.0
 offset_right = 1922.0
 offset_bottom = 458.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 16
 theme_override_fonts/font = ExtResource("2_sn6k4")
 theme_override_font_sizes/font_size = 64
 text = "Вы выполнили задание.
@@ -86,12 +81,13 @@ offset_top = 26.0
 offset_right = -26.0
 offset_bottom = 93.0
 grow_horizontal = 0
-theme_override_colors/font_outline_color = Color(0.376471, 0.376471, 0.376471, 1)
 theme_override_fonts/font = ExtResource("2_sn6k4")
 theme_override_font_sizes/font_size = 48
-text = "Уровень 2"
 
 [node name="exed" parent="." instance=ExtResource("7_ug1ug")]
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_intrs")
 
 [connection signal="timeout" from="FoodLabel/FoodLabelUpdateTimer" to="." method="_on_food_label_update_timer_timeout"]
 [connection signal="pressed" from="HideButton" to="." method="_on_hide_button_pressed"]

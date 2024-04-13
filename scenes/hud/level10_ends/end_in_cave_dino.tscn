@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqdq3aoc6ttt0"]
+
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_jt4lp"]
+[ext_resource type="Script" path="res://scenes/hud/level10_ends/end_dino.gd" id="1_mwhav"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="2_nd4rt"]
+[ext_resource type="Texture2D" uid="uid://bs7k2aa1pexhj" path="res://assets/sprites/animals/end4.png" id="4_xedjn"]
+
+[node name="End_1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mwhav")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_nd4rt")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 646.0
+offset_top = 845.0
+offset_right = 1212.0
+offset_bottom = 965.0
+theme_override_fonts/font = ExtResource("1_jt4lp")
+theme_override_font_sizes/font_size = 35
+text = "Попробовать снова"
+
+[node name="MainTitle" type="Label" parent="."]
+offset_left = 230.0
+offset_top = 678.0
+offset_right = 1624.0
+offset_bottom = 841.0
+theme_override_fonts/font = ExtResource("1_jt4lp")
+theme_override_font_sizes/font_size = 65
+text = "Вы спрятались в пещере, 
+это не помогло"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(923, 387)
+scale = Vector2(0.504318, 0.432738)
+texture = ExtResource("4_xedjn")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

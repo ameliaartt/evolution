@@ -17,6 +17,7 @@ func _on_food_label_update_timer_timeout():
 func _ready():
 	$LevelCompleteLabel.set("visible_characters", 0)
 	$HideButton.visible = false
+	$Label.text = "Уровень 6"
 	
 func show_level_complete_hud(food_count):
 	$LevelCompleteLabel.set("visible_characters", -1)
@@ -25,5 +26,7 @@ func show_level_complete_hud(food_count):
 Счёт: " + str(food_count)
 
 func _on_hide_button_pressed():
+	$button.play()
+	await $button.finished
 	Tasks.level6_2 = 1
 	get_tree().change_scene_to_file("res://scenes/levels/main_menu/vumer.tscn")

@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://ctcf2401v3py1"]
+[gd_scene load_steps=13 format=3 uid="uid://ctcf2401v3py1"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/level_3_2.gd" id="1_eqg47"]
 [ext_resource type="Texture2D" uid="uid://b1tan5h5y52j7" path="res://assets/tiles/level_2/tile.png" id="2_s4u2n"]
 [ext_resource type="PackedScene" uid="uid://cbya66tnneunm" path="res://scenes/levels/level3/animal3.tscn" id="3_3gwxq"]
 [ext_resource type="PackedScene" uid="uid://bxwboaoquym2d" path="res://scenes/levels/level1/food.tscn" id="4_7235q"]
 [ext_resource type="PackedScene" uid="uid://cfqu8cnun1k70" path="res://scenes/hud/level3/task_1.tscn" id="5_at23s"]
-[ext_resource type="PackedScene" uid="uid://u3v4rmt6504m" path="res://scenes/hud/level3/hud2.tscn" id="5_lfbqs"]
+[ext_resource type="PackedScene" uid="uid://b0dqgdwec8gxv" path="res://scenes/hud/level2/hud.tscn" id="6_twgep"]
 [ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/tiles/rock.png" id="7_3acwk"]
+[ext_resource type="Script" path="res://scenes/hud/level3/hud2.gd" id="7_lsg3w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpfqc"]
 texture = ExtResource("2_s4u2n")
@@ -115,9 +116,10 @@ position = Vector2(3959, 2419)
 [node name="Food2" parent="Foods" instance=ExtResource("4_7235q")]
 position = Vector2(1905, 2652)
 
-[node name="HUD" parent="." instance=ExtResource("5_lfbqs")]
-
 [node name="Task1" parent="." instance=ExtResource("5_at23s")]
+
+[node name="HUD" parent="." instance=ExtResource("6_twgep")]
+script = ExtResource("7_lsg3w")
 
 [node name="ExitArea" type="Area2D" parent="."]
 position = Vector2(4260, 2180)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnduns8u1a30d"]
+[gd_scene load_steps=5 format=3 uid="uid://dnduns8u1a30d"]
 
 [ext_resource type="Script" path="res://scenes/levels/level2/cat_scene_3.gd" id="1_u1e4w"]
 [ext_resource type="Texture2D" uid="uid://c1xcccq4r868r" path="res://assets/sprites/catscene/catsheen.png" id="2_0exkr"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_50os6"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="4_shmfj"]
 
 [node name="cat_scene3" type="Node"]
 script = ExtResource("1_u1e4w")
@@ -46,8 +47,6 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_50os6")
 theme_override_font_sizes/font_size = 66
 text = "Пикайя"
@@ -56,8 +55,6 @@ text = "Пикайя"
 custom_minimum_size = Vector2(600, 100)
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_50os6")
 theme_override_font_sizes/font_size = 35
 text = "Представляет собой одно из самых примитивных хордовых животных. У неё отсутствовала чётко обозначенная голова, а средняя длина доходила до 1—2 дюймов. На голове у пикайи присутствовала пара щупалец, схожих с антеннами, а также 9 пар коротких отростков, которые, возможно, были связаны с жаберными щелями по бокам головы. У основания этих отростков располагались небольшие круглые пятна, которые могли являться порами, соединявшими полость глотки с окружающей средой. Вдоль спины тянулся протяжённый, но почти незаметный спинной плавник."
@@ -69,5 +66,8 @@ theme_override_fonts/font = ExtResource("3_50os6")
 theme_override_font_sizes/font_size = 48
 text = "Продолжить
 "
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_shmfj")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dto7km2xcawwc"]
+
+[ext_resource type="Texture2D" uid="uid://ceeach0kf61fy" path="res://assets/sprites/animals/cave.png" id="1_fhpsx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_auu1i"]
+size = Vector2(479, 306.75)
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8.12496, -81.1249)
+scale = Vector2(2.91504, 2.70215)
+texture = ExtResource("1_fhpsx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, -87)
+shape = SubResource("RectangleShape2D_auu1i")

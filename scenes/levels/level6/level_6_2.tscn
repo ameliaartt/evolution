@@ -1,17 +1,18 @@
-[gd_scene load_steps=21 format=3 uid="uid://bq0uqxvff5cfx"]
+[gd_scene load_steps=22 format=3 uid="uid://bq0uqxvff5cfx"]
 
 [ext_resource type="Script" path="res://scenes/levels/level6/level_6_2.gd" id="1_fiu8e"]
 [ext_resource type="Texture2D" uid="uid://b1tan5h5y52j7" path="res://assets/tiles/level_2/tile.png" id="2_51yvd"]
 [ext_resource type="Texture2D" uid="uid://brlcmm10k7mow" path="res://assets/tiles/level_2/photo_2024-02-04_18-58-27.jpg" id="3_liw3r"]
 [ext_resource type="PackedScene" uid="uid://ddov4xxpqahli" path="res://scenes/levels/level6/animal_6_2.tscn" id="4_snvrg"]
 [ext_resource type="PackedScene" uid="uid://bxwboaoquym2d" path="res://scenes/levels/level1/food.tscn" id="5_84iof"]
-[ext_resource type="PackedScene" uid="uid://dj11kgcfx8l20" path="res://scenes/hud/level6/hud6_2.tscn" id="6_f1phi"]
 [ext_resource type="PackedScene" uid="uid://c61ros8lgxgyv" path="res://scenes/hud/level6/task6.tscn" id="6_xrtgu"]
 [ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/tiles/rock.png" id="7_s7xhd"]
 [ext_resource type="PackedScene" uid="uid://peig6qx4hm48" path="res://scenes/hud/level6/task_6_2.tscn" id="7_tovrf"]
 [ext_resource type="Script" path="res://scenes/hud/level6/task6_22.gd" id="8_is8qs"]
 [ext_resource type="Script" path="res://scenes/hud/level6/task6_3.gd" id="9_dfprg"]
 [ext_resource type="Script" path="res://scenes/hud/level6/task6_4.gd" id="10_qilmf"]
+[ext_resource type="PackedScene" uid="uid://b0dqgdwec8gxv" path="res://scenes/hud/level2/hud.tscn" id="11_r3rpv"]
+[ext_resource type="Script" path="res://scenes/hud/level6/hud6_2.gd" id="12_s3o0m"]
 [ext_resource type="PackedScene" uid="uid://uwhcpykyvkva" path="res://scenes/hunters_objects/hunter6.tscn" id="13_nyrt2"]
 [ext_resource type="PackedScene" uid="uid://c4xm2yjc4048v" path="res://scenes/objects/cust.tscn" id="14_rq05k"]
 
@@ -151,7 +152,8 @@ script = ExtResource("9_dfprg")
 [node name="Task5" parent="." instance=ExtResource("6_xrtgu")]
 script = ExtResource("10_qilmf")
 
-[node name="HUD" parent="." instance=ExtResource("6_f1phi")]
+[node name="HUD" parent="." instance=ExtResource("11_r3rpv")]
+script = ExtResource("12_s3o0m")
 
 [node name="ExitArea" type="Area2D" parent="."]
 position = Vector2(4260, 2180)

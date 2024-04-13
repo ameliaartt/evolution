@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4exo1t5uhbxh"]
+[gd_scene load_steps=9 format=3 uid="uid://c4exo1t5uhbxh"]
 
 [ext_resource type="Script" path="res://scenes/hud/level1/hud.gd" id="1_t8t1u"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_gsf3p"]
@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bwdvqaggn5pe4" path="res://assets/sprites/details/green_sliderDown.png" id="3_4llnl"]
 [ext_resource type="Texture2D" uid="uid://bdvx548v0273e" path="res://assets/sprites/details/green_sliderLeft.png" id="4_if6ud"]
 [ext_resource type="Texture2D" uid="uid://cqekng5okbuky" path="res://assets/sprites/details/green_sliderRight.png" id="5_sd04j"]
-[ext_resource type="PackedScene" uid="uid://bsdbsoi3pliqx" path="res://scenes/levels/main end/exed.tscn" id="7_rmjg7"]
+[ext_resource type="PackedScene" uid="uid://bsdbsoi3pliqx" path="res://scenes/levels/main_menu/exed.tscn" id="7_rmjg7"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="8_rc6v4"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_t8t1u")
@@ -46,9 +47,6 @@ offset_left = 16.0
 offset_top = -1.0
 offset_right = 230.0
 offset_bottom = 81.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.431373, 0.431373, 0.431373, 1)
-theme_override_constants/outline_size = 16
 theme_override_fonts/font = ExtResource("2_gsf3p")
 theme_override_font_sizes/font_size = 64
 text = "Еда: "
@@ -61,10 +59,6 @@ offset_left = -1.0
 offset_top = 215.0
 offset_right = 1922.0
 offset_bottom = 458.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.929412, 0.929412, 0.929412, 1)
-theme_override_colors/font_outline_color = Color(0.447059, 0.447059, 0.447059, 1)
-theme_override_constants/outline_size = 16
 theme_override_fonts/font = ExtResource("2_gsf3p")
 theme_override_font_sizes/font_size = 64
 text = "Вы выполнили задание.
@@ -90,12 +84,14 @@ offset_top = 26.0
 offset_right = -26.0
 offset_bottom = 93.0
 grow_horizontal = 0
-theme_override_colors/font_outline_color = Color(0.376471, 0.376471, 0.376471, 1)
 theme_override_fonts/font = ExtResource("2_gsf3p")
 theme_override_font_sizes/font_size = 48
 text = "Уровень 1"
 
 [node name="exed" parent="." instance=ExtResource("7_rmjg7")]
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_rc6v4")
 
 [connection signal="timeout" from="FoodLabel/FoodLabelUpdateTimer" to="." method="_on_food_label_update_timer_timeout"]
 [connection signal="pressed" from="HideButton" to="." method="_on_hide_button_pressed"]

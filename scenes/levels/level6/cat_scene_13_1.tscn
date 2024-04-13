@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyatux2svfvo2"]
+[gd_scene load_steps=5 format=3 uid="uid://dyatux2svfvo2"]
 
 [ext_resource type="Script" path="res://scenes/levels/level6/cat_scene_13_1.gd" id="1_7yn2j"]
 [ext_resource type="Texture2D" uid="uid://cy0ojfjia78sp" path="res://assets/sprites/catscene/catsheen12.png" id="2_yl8bb"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_o2gq6"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="5_c5tnd"]
 
 [node name="cat_scene5" type="Node"]
 script = ExtResource("1_7yn2j")
@@ -46,8 +47,6 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_o2gq6")
 theme_override_font_sizes/font_size = 66
 text = "Синапсид"
@@ -56,8 +55,6 @@ text = "Синапсид"
 custom_minimum_size = Vector2(600, 100)
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_o2gq6")
 theme_override_font_sizes/font_size = 32
 text = "Характерной чертой синапсид является наличие с каждой стороны их черепа одного височного отверстия. Височные отверстия служат для выхода челюстных мышц, а их наличие позволяло тем амниотам, которые их имели, более эффективно — по сравнению с земноводными и черепахами (череп которых височных отверстий не имеет) — кусать свою добычу. 
@@ -70,5 +67,8 @@ theme_override_fonts/font = ExtResource("3_o2gq6")
 theme_override_font_sizes/font_size = 48
 text = "Продолжить
 "
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_c5tnd")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

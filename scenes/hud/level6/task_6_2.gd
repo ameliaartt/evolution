@@ -20,6 +20,8 @@ func show_task():
 		
 
 func _on_button_3_pressed():
+	$button.play()
+	await $button.finished
 	$Label.set("visible_characters", 0)
 	$Label2.set("visible_characters", 0)
 	$ColorRect.visible = false

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy2nychvvbnlc"]
+[gd_scene load_steps=5 format=3 uid="uid://cy2nychvvbnlc"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/cat_scene_7.gd" id="1_gmjx5"]
 [ext_resource type="Texture2D" uid="uid://cjp5nfktnfuis" path="res://assets/sprites/catscene/catsheen7.png" id="2_xvt7s"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_uwxp8"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="5_xkm7r"]
 
 [node name="cat_scene5" type="Node"]
 script = ExtResource("1_gmjx5")
@@ -46,8 +47,6 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_uwxp8")
 theme_override_font_sizes/font_size = 66
 text = "Конодонта"
@@ -56,8 +55,6 @@ text = "Конодонта"
 custom_minimum_size = Vector2(600, 100)
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_uwxp8")
 theme_override_font_sizes/font_size = 32
 text = "Среди конодонтоносителей были как совсем крошечные (длиной около 1 см), так и гигантские (например, Promissum, длина которого достигала 40 см)
@@ -71,5 +68,8 @@ theme_override_fonts/font = ExtResource("3_uwxp8")
 theme_override_font_sizes/font_size = 48
 text = "Продолжить
 "
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_xkm7r")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -45,10 +45,14 @@ func _process(delta):
 
 
 func _on_button_pressed():
+	$button.play()
+	await $button.finished
 	get_tree().change_scene_to_file("res://scenes/levels/main_menu/achive2.tscn")
 	pass
 
 
 func _on_button_2_pressed():
+	$button.play()
+	await $button.finished
 	get_tree().change_scene_to_file("res://scenes/levels/main_menu/menu.tscn")
 	pass

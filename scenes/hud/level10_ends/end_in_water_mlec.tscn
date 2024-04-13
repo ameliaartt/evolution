@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://tgppnb3c5l7g"]
+
+[ext_resource type="Script" path="res://scenes/hud/level10_ends/end_mlec.gd" id="1_i8vdk"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_m628p"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="2_pqe5f"]
+[ext_resource type="Texture2D" uid="uid://i7p5sklgsl0a" path="res://assets/sprites/animals/end7.png" id="4_w3tyj"]
+
+[node name="End_1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i8vdk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="MainTitle" type="Label" parent="."]
+offset_left = 242.0
+offset_top = 685.0
+offset_right = 1636.0
+offset_bottom = 840.0
+theme_override_fonts/font = ExtResource("1_m628p")
+theme_override_font_sizes/font_size = 102
+text = "Вы утонули"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 869.0
+offset_right = 1190.0
+offset_bottom = 989.0
+theme_override_fonts/font = ExtResource("1_m628p")
+theme_override_font_sizes/font_size = 35
+text = "Попробовать снова"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_pqe5f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(916.036, 386.493)
+scale = Vector2(0.478854, 0.398381)
+texture = ExtResource("4_w3tyj")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

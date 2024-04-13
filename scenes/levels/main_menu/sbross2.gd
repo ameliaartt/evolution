@@ -26,6 +26,8 @@ func _process(delta):
 
 
 func _on_button_pressed():
+	$button.play()
+	await $button.finished
 	Tasks.all_food = 0
 	Tasks.food_2 = 0
 	Tasks.food_4 = 0
@@ -46,6 +48,8 @@ func _on_button_pressed():
 	Tasks.level8_1 = 0
 	Tasks.level8_2 = 0
 	Tasks.level9 = 0
+	Tasks.level10_1 = 0
+	Tasks.level10_2 = 0
 	$Label.set("visible_characters", 0)
 	$ColorRect.visible = false
 	$Button.visible = false
@@ -54,6 +58,8 @@ func _on_button_pressed():
 
 
 func _on_button_2_pressed():
+	$button.play()
+	await $button.finished
 	$Label.set("visible_characters", 0)
 	$ColorRect.visible = false
 	$Button.visible = false

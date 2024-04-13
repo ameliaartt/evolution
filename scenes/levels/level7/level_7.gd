@@ -4,6 +4,7 @@ var count: int = 0
 var count2: int = 0
 var count3: int = 0
 var count4: int = 0
+var count5: int = 0
 func update_food(food_count):
 	$HUD.update_hud(food_count)
 
@@ -38,6 +39,9 @@ func show_task3():
 	
 func show_task4():
 	$Task4.show_task4()
+	
+func show_task5():
+	$Task4.show_task4()
 
 func _process(delta):
 	pass
@@ -71,4 +75,11 @@ func _on_test_area_4_body_entered(body):
 	if count4 == 0:
 		show_task4()
 	count4 += 1
+	pass # Replace with function body.
+
+
+func _on_test_area_5_body_entered(body):
+	if count5 == 0:
+		show_task5()
+	count5 += 1
 	pass # Replace with function body.

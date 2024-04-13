@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bngl0hfcaceca"]
+[gd_scene load_steps=5 format=3 uid="uid://bngl0hfcaceca"]
 
 [ext_resource type="Script" path="res://scenes/levels/level2/cat_scene_4.gd" id="1_d8tmi"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_14p1f"]
 [ext_resource type="Texture2D" uid="uid://c3fhhqf8uijik" path="res://assets/sprites/catscene/catsheen3.jpg" id="3_b6c2s"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="5_nge0x"]
 
 [node name="cat_scene4" type="Control"]
 layout_mode = 3
@@ -47,8 +48,6 @@ size_flags_vertical = 6
 
 [node name="Label" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_14p1f")
 theme_override_font_sizes/font_size = 64
 text = "Кембрийский период"
@@ -56,11 +55,9 @@ text = "Кембрийский период"
 [node name="Label2" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_14p1f")
 theme_override_font_sizes/font_size = 36
-text = "Кембрий — время возникновения и расцвета трилобитов. Это древняя группа членистоногих животных, ближе всего стоящих к ракообразным. Все известные представители класса трилобитов были морскими животными. ембрийская фауна широко представлена ракушками, создателями которых были как моллюски, так и плеченогие. Среди них особенно выделяются хиолиты. Они получили известность как «мелкая раковистая фауна» ."
+text = "Кембрий — время возникновения и расцвета трилобитов. Это древняя группа членистоногих животных, ближе всего стоящих к ракообразным. Все известные представители класса трилобитов были морскими животными. Эмбрийская фауна широко представлена ракушками, создателями которых были как моллюски, так и плеченогие. Среди них особенно выделяются хиолиты. Они получили известность как «мелкая раковистая фауна» ."
 autowrap_mode = 3
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/GridContainer"]
@@ -78,5 +75,8 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_14p1f")
 theme_override_font_sizes/font_size = 48
 text = "На следующий уровень"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_nge0x")
 
 [connection signal="pressed" from="MarginContainer/GridContainer/VBoxContainer2/Button" to="." method="_on_button_pressed"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6idcdhpfng4e"]
+[gd_scene load_steps=5 format=3 uid="uid://b6idcdhpfng4e"]
 
 [ext_resource type="Script" path="res://scenes/levels/level4/cat_scene_8.gd" id="1_5dj1n"]
 [ext_resource type="Texture2D" uid="uid://lsygb63qc5ra" path="res://assets/sprites/catscene/catsheen9.jpg" id="3_7a2qj"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_lrl35"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="5_rnb0k"]
 
 [node name="cat_scene6" type="Control"]
 layout_mode = 3
@@ -47,8 +48,6 @@ size_flags_vertical = 6
 
 [node name="Label" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_lrl35")
 theme_override_font_sizes/font_size = 64
 text = "Силурийский период"
@@ -56,8 +55,6 @@ text = "Силурийский период"
 [node name="Label2" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_lrl35")
 theme_override_font_sizes/font_size = 36
 text = "Нижняя граница силура определяется по крупному вымиранию, в результате которого исчезло около 60 % видов существовавших в ордовике морских организмов, — так называемому ордовикско-силурийскому вымиранию.
@@ -79,5 +76,8 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_lrl35")
 theme_override_font_sizes/font_size = 48
 text = "На следующий уровень"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_rnb0k")
 
 [connection signal="pressed" from="MarginContainer/GridContainer/VBoxContainer2/Button" to="." method="_on_button_pressed"]

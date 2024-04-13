@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpxce676606a8"]
+[gd_scene load_steps=5 format=3 uid="uid://dpxce676606a8"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/cat_scene_6.gd" id="1_oxt8d"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_goncs"]
 [ext_resource type="Texture2D" uid="uid://u1bjmhhwig0m" path="res://assets/sprites/catscene/catsheen4.jpg" id="3_qk2gk"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="5_ycxe1"]
 
 [node name="cat_scene6" type="Control"]
 layout_mode = 3
@@ -47,8 +48,6 @@ size_flags_vertical = 6
 
 [node name="Label" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_goncs")
 theme_override_font_sizes/font_size = 64
 text = "Ордовикский период"
@@ -56,8 +55,6 @@ text = "Ордовикский период"
 [node name="Label2" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_goncs")
 theme_override_font_sizes/font_size = 36
 text = "Жизнь в ордовике продолжала бурно развиваться. Сопоставимая с кембрийским взрывом диверсификация организмов происходила в течение всего периода. Моллюски и членистоногие продолжали оставаться доминирующими морскими животными. Появляются первые челюстноротые рыбы. Суша по большей части продолжала оставаться пустынной, однако в прибрежных зонах стали появляться первые наземные растения.
@@ -79,5 +76,8 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_goncs")
 theme_override_font_sizes/font_size = 48
 text = "На следующий уровень"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ycxe1")
 
 [connection signal="pressed" from="MarginContainer/GridContainer/VBoxContainer2/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://pwwsqbo3d3op"]
+
+[ext_resource type="Script" path="res://scenes/hud/level10_ends/end_dino.gd" id="1_yygbr"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_wog4u"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="3_20f57"]
+[ext_resource type="Texture2D" uid="uid://bek8lu8ypiomg" path="res://assets/sprites/animals/end6.png" id="4_gw21w"]
+
+[node name="End_1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yygbr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 642.0
+offset_top = 852.0
+offset_right = 1208.0
+offset_bottom = 972.0
+theme_override_fonts/font = ExtResource("2_wog4u")
+theme_override_font_sizes/font_size = 35
+text = "Попробовать снова"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_20f57")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(916.036, 386.493)
+scale = Vector2(0.478854, 0.398381)
+texture = ExtResource("4_gw21w")
+
+[node name="MainTitle" type="Label" parent="."]
+offset_left = 242.0
+offset_top = 685.0
+offset_right = 1636.0
+offset_bottom = 840.0
+theme_override_fonts/font = ExtResource("2_wog4u")
+theme_override_font_sizes/font_size = 102
+text = "Вы утонули"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://begwlq136huby"]
+
+[ext_resource type="Script" path="res://scenes/hud/level10_ends/end_dino.gd" id="1_ccmf1"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_hbnlo"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="2_tixnq"]
+[ext_resource type="Texture2D" uid="uid://b7t6p66p85nr5" path="res://assets/sprites/animals/end1.png" id="3_0i4kx"]
+
+[node name="End_1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ccmf1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="MainTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 685.0
+offset_right = 1636.0
+offset_bottom = 840.0
+theme_override_fonts/font = ExtResource("1_hbnlo")
+theme_override_font_sizes/font_size = 102
+text = "Вы не сумели спрятаться"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 670.0
+offset_top = 875.0
+offset_right = 1236.0
+offset_bottom = 995.0
+theme_override_fonts/font = ExtResource("1_hbnlo")
+theme_override_font_sizes/font_size = 35
+text = "В меню"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_tixnq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(942, 368)
+scale = Vector2(0.644593, 0.545279)
+texture = ExtResource("3_0i4kx")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

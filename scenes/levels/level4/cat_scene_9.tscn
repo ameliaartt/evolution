@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dntev726xm7qt"]
+[gd_scene load_steps=5 format=3 uid="uid://dntev726xm7qt"]
 
 [ext_resource type="Script" path="res://scenes/levels/level4/cat_scene_9.gd" id="1_bdsmv"]
 [ext_resource type="Texture2D" uid="uid://c25byq2nlm0vt" path="res://assets/sprites/catscene/catsheen8.png" id="2_ac13l"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_b6tsq"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="5_8xyut"]
 
 [node name="cat_scene5" type="Node"]
 script = ExtResource("1_bdsmv")
@@ -46,8 +47,6 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_b6tsq")
 theme_override_font_sizes/font_size = 66
 text = "Акантода"
@@ -56,8 +55,6 @@ text = "Акантода"
 custom_minimum_size = Vector2(600, 100)
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_b6tsq")
 theme_override_font_sizes/font_size = 33
 text = "В своём строении акантоды сочетают признаки, характерные и для других групп палеозойских челюстноротых, отличаясь наличием хорошо выраженных плавниковых шипов перед всеми плавниками, кроме хвостового.
@@ -71,5 +68,8 @@ theme_override_fonts/font = ExtResource("3_b6tsq")
 theme_override_font_sizes/font_size = 48
 text = "Продолжить
 "
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8xyut")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

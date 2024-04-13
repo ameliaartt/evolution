@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dya3ixa8dldlv"]
+[gd_scene load_steps=5 format=3 uid="uid://dya3ixa8dldlv"]
 
 [ext_resource type="Script" path="res://scenes/levels/level7/cat_scene_15.gd" id="1_retob"]
 [ext_resource type="Texture2D" uid="uid://dymgtiegfsnoi" path="res://assets/sprites/catscene/catsheen15.png" id="2_j6yvd"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_j22yb"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="4_eakfn"]
 
 [node name="cat_scene5" type="Node"]
 script = ExtResource("1_retob")
@@ -46,8 +47,6 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_j22yb")
 theme_override_font_sizes/font_size = 66
 text = "Листозавр"
@@ -56,8 +55,6 @@ text = "Листозавр"
 custom_minimum_size = Vector2(600, 100)
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_j22yb")
 theme_override_font_sizes/font_size = 31
 text = "Длина черепа у разных видов от 12 до 40 см, длина тела могла достигать 2 м. Как и у многих других дицинодонтов, у листрозавров из всех зубов сохранились лишь два верхних клыка. Челюсти, вероятно, были одеты роговым клювом. Ноги короткие и массивные.
@@ -71,5 +68,8 @@ theme_override_fonts/font = ExtResource("3_j22yb")
 theme_override_font_sizes/font_size = 48
 text = "Продолжить
 "
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_eakfn")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

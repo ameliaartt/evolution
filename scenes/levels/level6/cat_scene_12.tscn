@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbateolwyqyao"]
+[gd_scene load_steps=5 format=3 uid="uid://bbateolwyqyao"]
 
 [ext_resource type="Script" path="res://scenes/levels/level6/cat_scene_12.gd" id="1_0nlka"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_5e2l5"]
 [ext_resource type="Texture2D" uid="uid://bugf866acyv27" path="res://assets/sprites/catscene/catsheen12.jpg" id="3_7g3gj"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="5_uqheb"]
 
 [node name="cat_scene6" type="Control"]
 layout_mode = 3
@@ -47,8 +48,6 @@ size_flags_vertical = 6
 
 [node name="Label" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_5e2l5")
 theme_override_font_sizes/font_size = 64
 text = "Каменноугольный период"
@@ -56,8 +55,6 @@ text = "Каменноугольный период"
 [node name="Label2" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_5e2l5")
 theme_override_font_sizes/font_size = 36
 text = "К каменноугольному периоду жизнь окончательно закрепилась на суше. Четвероногие приобрели пятипалые конечности и сильно диверсифицировались в течение периода. Благодаря влажному климату, амфибии стали доминирующими позвоночными животными на суше. Появились первые амниоты, разделившиеся на синапсидов (предков млекопитающих) и завропсидов (предки современных рептилий и птиц). Насекомые также достигли большого разнообразия. Землю от полюса до полюса покрывали леса из примитивных папоротниковидных растений, оставивших от себя большие отложения каменного угля. Континенты в течение периода сформировали Пангею. 
@@ -79,5 +76,8 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_5e2l5")
 theme_override_font_sizes/font_size = 48
 text = "На следующий уровень"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_uqheb")
 
 [connection signal="pressed" from="MarginContainer/GridContainer/VBoxContainer2/Button" to="." method="_on_button_pressed"]

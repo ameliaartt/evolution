@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://xfur6h5a3h8j"]
+
+[ext_resource type="Texture2D" uid="uid://jcyedobxi2wf" path="res://assets/sprites/animals/nora.png" id="1_kk2pi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dvjdc"]
+radius = 32.0
+height = 178.0
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-7, -21)
+scale = Vector2(1.2168, 1.20117)
+texture = ExtResource("1_kk2pi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 5)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dvjdc")

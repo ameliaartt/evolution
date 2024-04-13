@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b45eb131xeqa2"]
+[gd_scene load_steps=5 format=3 uid="uid://b45eb131xeqa2"]
 
 [ext_resource type="Script" path="res://scenes/levels/level9/cat_scene_18.gd" id="1_dqreb"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_w0rxc"]
 [ext_resource type="Texture2D" uid="uid://bh05uyvoo5l84" path="res://assets/sprites/catscene/catsheen18.jpg" id="3_x8pge"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="5_ve2r0"]
 
 [node name="cat_scene18" type="Control"]
 layout_mode = 3
@@ -47,8 +48,6 @@ size_flags_vertical = 6
 
 [node name="Label" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_w0rxc")
 theme_override_font_sizes/font_size = 64
 text = "Юрский период"
@@ -56,8 +55,6 @@ text = "Юрский период"
 [node name="Label2" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_w0rxc")
 theme_override_font_sizes/font_size = 33
 text = "В юрский период на Земле обитают мелкие, покрытые шерстью теплокровные животные, потомки пермских синапсид — млекопитающие. Они живут рядом с динозаврами и почти незаметны на их фоне. В юрском периоде произошло разделение млекопитающих на однопроходных, сумчатых и плацентарных. В озёрах и реках можно было найти многочисленных черепах.
@@ -79,5 +76,8 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_w0rxc")
 theme_override_font_sizes/font_size = 48
 text = "На следующий уровень"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ve2r0")
 
 [connection signal="pressed" from="MarginContainer/GridContainer/VBoxContainer2/Button" to="." method="_on_button_pressed"]

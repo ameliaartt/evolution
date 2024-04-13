@@ -1,15 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://dt4hbb8dk2l13"]
+[gd_scene load_steps=20 format=3 uid="uid://dt4hbb8dk2l13"]
 
 [ext_resource type="Script" path="res://scenes/levels/level5/level_5.gd" id="1_8ok31"]
 [ext_resource type="Texture2D" uid="uid://b1tan5h5y52j7" path="res://assets/tiles/level_2/tile.png" id="2_25f4u"]
 [ext_resource type="PackedScene" uid="uid://dhrep567qnm3w" path="res://scenes/levels/level5/animal_5.tscn" id="3_jume3"]
 [ext_resource type="PackedScene" uid="uid://bxwboaoquym2d" path="res://scenes/levels/level1/food.tscn" id="5_5g67t"]
-[ext_resource type="PackedScene" uid="uid://crwx72lv0cv0t" path="res://scenes/hud/level5/hud5.tscn" id="5_b8nn6"]
 [ext_resource type="PackedScene" uid="uid://0js12qgxyfjv" path="res://scenes/hud/level5/task5.tscn" id="5_bo51l"]
 [ext_resource type="PackedScene" uid="uid://6xw23jcvy5j7" path="res://scenes/hud/level5/task_5_2.tscn" id="6_6acc2"]
 [ext_resource type="Script" path="res://scenes/hud/level5/task5_3.gd" id="7_8v6fl"]
 [ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/tiles/rock.png" id="7_juyqx"]
 [ext_resource type="Script" path="res://scenes/hud/level5/task5_4.gd" id="8_thtpj"]
+[ext_resource type="PackedScene" uid="uid://b0dqgdwec8gxv" path="res://scenes/hud/level2/hud.tscn" id="9_vowaw"]
+[ext_resource type="Script" path="res://scenes/hud/level5/hud5.gd" id="10_w07v4"]
 [ext_resource type="PackedScene" uid="uid://dk5hxe4xehsvq" path="res://scenes/objects/miduza.tscn" id="11_rj5wa"]
 [ext_resource type="PackedScene" uid="uid://d1l05slocvdum" path="res://scenes/objects/listva2.tscn" id="12_ihq7k"]
 [ext_resource type="PackedScene" uid="uid://ccuaffq3i06s2" path="res://scenes/objects/listva.tscn" id="13_denln"]
@@ -132,7 +133,8 @@ script = ExtResource("7_8v6fl")
 [node name="Task4" parent="." instance=ExtResource("5_bo51l")]
 script = ExtResource("8_thtpj")
 
-[node name="HUD" parent="." instance=ExtResource("5_b8nn6")]
+[node name="HUD" parent="." instance=ExtResource("9_vowaw")]
+script = ExtResource("10_w07v4")
 
 [node name="ExitArea" type="Area2D" parent="."]
 position = Vector2(4260, 2180)
@@ -163,19 +165,19 @@ position = Vector2(13, -4)
 shape = SubResource("RectangleShape2D_8ved4")
 
 [node name="TestArea3" type="Area2D" parent="."]
-position = Vector2(1155, 2933)
+position = Vector2(3175, 2959)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestArea3"]
-position = Vector2(-5, 17)
+position = Vector2(22, -9)
 shape = SubResource("RectangleShape2D_8ved4")
 
 [node name="TestArea4" type="Area2D" parent="."]
-position = Vector2(3200, 2954)
+position = Vector2(1157, 2939)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestArea4"]
-position = Vector2(11, -10)
+position = Vector2(-8, 17)
 shape = SubResource("RectangleShape2D_8ved4")
 
 [node name="Decoration" type="Node2D" parent="."]

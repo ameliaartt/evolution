@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://3mq2t2wg5gxe"]
+[gd_scene load_steps=5 format=3 uid="uid://3mq2t2wg5gxe"]
 
 [ext_resource type="Script" path="res://scenes/levels/level6/cat_scene_13_2.gd" id="1_n6bpc"]
 [ext_resource type="Texture2D" uid="uid://d0x8njwlx54uv" path="res://assets/sprites/catscene/catsheen13.png" id="2_71v2k"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_ewnss"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="5_0084l"]
 
 [node name="cat_scene5" type="Node"]
 script = ExtResource("1_n6bpc")
@@ -46,8 +47,6 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_ewnss")
 theme_override_font_sizes/font_size = 66
 text = "Меганевр"
@@ -56,8 +55,6 @@ text = "Меганевр"
 custom_minimum_size = Vector2(600, 100)
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_ewnss")
 theme_override_font_sizes/font_size = 39
 text = "род вымерших стрекозообразных насекомых, живших в конце каменноугольного периода . Включает Meganeura monyi, имевшую длину и переднего и заднего крыла в 300 мм и являющуюся, наряду с Meganeuropsis permiana, одним из крупнейших насекомых всех времён. 
@@ -70,5 +67,8 @@ theme_override_fonts/font = ExtResource("3_ewnss")
 theme_override_font_sizes/font_size = 48
 text = "Продолжить
 "
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_0084l")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

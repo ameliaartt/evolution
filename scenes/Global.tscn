@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://j2anejlos4wq"]
+
+[ext_resource type="AudioStream" uid="uid://b462sgmhef7lr" path="res://music/levels3.mp3" id="1_vs2kt"]
+[ext_resource type="Script" path="res://scenes/Global.gd" id="1_w2x4b"]
+[ext_resource type="AudioStream" uid="uid://cqvpbvsptdhid" path="res://music/music_menu.mp3" id="2_5limk"]
+[ext_resource type="AudioStream" uid="uid://l0q32llpahpl" path="res://music/meteor.mp3" id="4_sxvae"]
+[ext_resource type="AudioStream" uid="uid://c6dkpt56ciwgc" path="res://music/level10.mp3" id="5_2lnak"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_w2x4b")
+
+[node name="levels" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_vs2kt")
+volume_db = -25.0
+
+[node name="menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5limk")
+volume_db = -23.0
+
+[node name="metior" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_sxvae")
+volume_db = -23.0
+
+[node name="level10" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_2lnak")
+volume_db = -23.0

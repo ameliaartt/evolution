@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://6xw23jcvy5j7"]
+[gd_scene load_steps=4 format=3 uid="uid://6xw23jcvy5j7"]
 
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_3np86"]
 [ext_resource type="Script" path="res://scenes/hud/level5/task_5_2.gd" id="1_jaui8"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="3_eryxd"]
 
 [node name="Task1" type="CanvasLayer"]
 script = ExtResource("1_jaui8")
@@ -17,58 +18,63 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -603.0
-offset_top = -491.0
-offset_right = 535.0
-offset_bottom = -241.0
+offset_left = -826.0
+offset_top = -424.0
+offset_right = 784.0
+offset_bottom = -174.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_3np86")
 theme_override_font_sizes/font_size = 42
 text = "Устали от биологии? Самое время сделать перерыв
-и узнать что то новое. Вы знали о шифре Бэкон? 
-Попоробуйте разгадать эту кодировку:
-BAAAAABAABABABBAAAAAABABAAAAAA"
+и порешать головоломки на логику 
+Попоробуйте разгадать эту загадку:
+ААААААААААААААААА_АААААААААА_АААААААААААА_А_ААААААААААА_А"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -788.0
-offset_top = 280.0
-offset_right = 983.0
-offset_bottom = 447.0
+offset_left = -876.0
+offset_top = 343.0
+offset_right = 895.0
+offset_bottom = 510.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_3np86")
 theme_override_font_sizes/font_size = 40
-text = "Подсказка: попробуйте перевод чисел в двоичную систему счисления"
+text = "Подсказка: попробуйте посчитать количество А"
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
-offset_left = 661.0
-offset_top = 386.0
-offset_right = 1154.0
-offset_bottom = 477.0
+offset_left = 714.0
+offset_top = 440.0
+offset_right = 1207.0
+offset_bottom = 531.0
 theme_override_fonts/font = ExtResource("1_3np86")
 theme_override_font_sizes/font_size = 35
 text = "Карбон"
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 664.0
-offset_top = 555.0
-offset_right = 1157.0
-offset_bottom = 646.0
+offset_left = 716.0
+offset_top = 584.0
+offset_right = 1209.0
+offset_bottom = 675.0
 theme_override_fonts/font = ExtResource("1_3np86")
 theme_override_font_sizes/font_size = 35
 text = "Диконсия"
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 663.0
-offset_top = 721.0
-offset_right = 1156.0
-offset_bottom = 812.0
+offset_left = 719.0
+offset_top = 723.0
+offset_right = 1212.0
+offset_bottom = 814.0
 theme_override_fonts/font = ExtResource("1_3np86")
 theme_override_font_sizes/font_size = 35
 text = "Пикайа"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_eryxd")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

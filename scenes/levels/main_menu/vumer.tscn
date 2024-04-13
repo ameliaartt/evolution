@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://veyhdnm3gdf7"]
+[gd_scene load_steps=5 format=3 uid="uid://veyhdnm3gdf7"]
 
 [ext_resource type="Script" path="res://scenes/levels/main_menu/end.gd" id="1_25ses"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_70m0c"]
+[ext_resource type="AudioStream" uid="uid://cqvpbvsptdhid" path="res://music/music_menu.mp3" id="3_7yeim"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="4_m6c44"]
 
 [node name="End_1" type="Control"]
 layout_mode = 3
@@ -24,8 +26,6 @@ offset_left = 457.0
 offset_top = 323.0
 offset_right = 1403.0
 offset_bottom = 478.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 8
 theme_override_fonts/font = ExtResource("2_70m0c")
 theme_override_font_sizes/font_size = 128
 text = "Поздравляю, 
@@ -40,5 +40,13 @@ offset_bottom = 764.0
 theme_override_fonts/font = ExtResource("2_70m0c")
 theme_override_font_sizes/font_size = 35
 text = "Попробовать снова"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7yeim")
+volume_db = -25.0
+autoplay = true
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_m6c44")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

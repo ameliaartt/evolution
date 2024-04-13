@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cr0gnx14suks3"]
+[gd_scene load_steps=5 format=3 uid="uid://cr0gnx14suks3"]
 
 [ext_resource type="Script" path="res://scenes/levels/level9/cat_scene_19.gd" id="1_sunfj"]
 [ext_resource type="Texture2D" uid="uid://byhv226m77eue" path="res://assets/sprites/catscene/catsheen19.png" id="2_vbrud"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="3_j1wit"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="5_uq37q"]
 
 [node name="cat_scene19" type="Node"]
 script = ExtResource("1_sunfj")
@@ -46,8 +47,6 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_j1wit")
 theme_override_font_sizes/font_size = 66
 text = "Брахиозавр"
@@ -56,8 +55,6 @@ text = "Брахиозавр"
 custom_minimum_size = Vector2(600, 100)
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_j1wit")
 theme_override_font_sizes/font_size = 33
 text = "Брахиозавр считается растительноядным животным, обрезавшим или щипавшим листья деревьев на высоте до 9 м от земли. Зубы мощные, ложковидные. У брахиозавра был очень маленький мозг и потому ученые полагают, что он был не очень-то смышленым. Детенышу брахиозавра, вероятно, требовалось не менее 10 лет, чтобы достичь размеров взрослой особи, которые, возможно, жили до 70 лет.
@@ -70,5 +67,8 @@ theme_override_fonts/font = ExtResource("3_j1wit")
 theme_override_font_sizes/font_size = 48
 text = "Продолжить
 "
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_uq37q")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

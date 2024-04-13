@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b58up4eusotf7"]
+[gd_scene load_steps=5 format=3 uid="uid://b58up4eusotf7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/cat_scene_5.gd" id="1_4jvsq"]
 [ext_resource type="Texture2D" uid="uid://cfrtybf167qwe" path="res://assets/sprites/catscene/catsheen2.png" id="2_2nbu3"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_i87cr"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="5_k8vig"]
 
 [node name="cat_scene5" type="Node"]
 script = ExtResource("1_4jvsq")
@@ -46,8 +47,6 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_i87cr")
 theme_override_font_sizes/font_size = 66
 text = "Хайкоуихтис"
@@ -56,8 +55,6 @@ text = "Хайкоуихтис"
 custom_minimum_size = Vector2(600, 100)
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_i87cr")
 theme_override_font_sizes/font_size = 33
 text = "Мелкое (2,5 см) водное хордовое. Примитивный хрящевой позвоночник позволял ему плавать совсем иначе, чем это делают членистоногие животные. Маленькое тельце хайкоуихтиса было лишено плавников, но зато у животного были глаза, жабры и головной мозг, что делало его самым продвинутым обитателем кембрийских морей.
@@ -70,5 +67,8 @@ theme_override_fonts/font = ExtResource("2_i87cr")
 theme_override_font_sizes/font_size = 48
 text = "Продолжить
 "
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_k8vig")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

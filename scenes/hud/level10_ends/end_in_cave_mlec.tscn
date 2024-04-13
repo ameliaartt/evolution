@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://cseq434mon8ba"]
+
+[ext_resource type="Script" path="res://scenes/hud/level10_ends/end_mlec.gd" id="1_pocrp"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_wrkmr"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="2_ow2oq"]
+[ext_resource type="Texture2D" uid="uid://dp3e408ipwlcp" path="res://assets/sprites/animals/end5.png" id="4_an400"]
+
+[node name="End_1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pocrp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="MainTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 639.0
+offset_right = 1627.0
+offset_bottom = 890.0
+theme_override_fonts/font = ExtResource("1_wrkmr")
+theme_override_font_sizes/font_size = 90
+text = "Вы спрятались в пещере,
+вы выжили"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 634.0
+offset_top = 870.0
+offset_right = 1200.0
+offset_bottom = 990.0
+theme_override_fonts/font = ExtResource("1_wrkmr")
+theme_override_font_sizes/font_size = 35
+text = "Попробовать снова"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ow2oq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(916.036, 386.493)
+scale = Vector2(0.478854, 0.398381)
+texture = ExtResource("4_an400")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

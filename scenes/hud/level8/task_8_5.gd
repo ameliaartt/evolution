@@ -23,14 +23,16 @@ func show_task5():
 	$Button3.visible = true
 	$Label.text = "Чтобы пройти дальше ответьте на вопрос"
 	if num_num == 1:
-		$Label2.text = Tasks.task1_3_lvl7
+		$Label2.text = Tasks.task5_3_lvl8
 	if num_num == 2:
-		$Label2.text = Tasks.task1_1_lvl7
+		$Label2.text = Tasks.task5_1_lvl8
 	if num_num == 3:
-		$Label2.text = Tasks.task1_2_lvl7
+		$Label2.text = Tasks.task5_2_lvl8
 
 
 func _on_button_pressed():
+	$button.play()
+	await $button.finished
 	if num_num == 1:
 		$Label.set("visible_characters", 0)
 		$Label2.set("visible_characters", 0)
@@ -43,6 +45,8 @@ func _on_button_pressed():
 	pass # Replace with function body.
 
 func _on_button_2_pressed():
+	$button.play()
+	await $button.finished
 	if num_num == 3:
 		$Label.set("visible_characters", 0)
 		$Label2.set("visible_characters", 0)
@@ -56,6 +60,8 @@ func _on_button_2_pressed():
 
 
 func _on_button_3_pressed():
+	$button.play()
+	await $button.finished
 	if num_num == 2:
 		$Label.set("visible_characters", 0)
 		$Label2.set("visible_characters", 0)

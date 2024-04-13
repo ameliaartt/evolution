@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=3 uid="uid://udtx3igc8fd0"]
+
+[ext_resource type="Script" path="res://scenes/hud/level10/hud10.gd" id="1_hb4wq"]
+[ext_resource type="Texture2D" uid="uid://b8c2kuno0lylu" path="res://assets/sprites/details/green_sliderUp.png" id="2_3266n"]
+[ext_resource type="Texture2D" uid="uid://bwdvqaggn5pe4" path="res://assets/sprites/details/green_sliderDown.png" id="3_fo3v6"]
+[ext_resource type="Texture2D" uid="uid://bdvx548v0273e" path="res://assets/sprites/details/green_sliderLeft.png" id="4_w6whb"]
+[ext_resource type="Texture2D" uid="uid://cqekng5okbuky" path="res://assets/sprites/details/green_sliderRight.png" id="5_8qt1h"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="6_muxhc"]
+[ext_resource type="PackedScene" uid="uid://bsdbsoi3pliqx" path="res://scenes/levels/main_menu/exed.tscn" id="7_680lt"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="8_4codh"]
+[ext_resource type="Script" path="res://scenes/levels/main_menu/exed2.gd" id="8_8mgnu"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_hb4wq")
+
+[node name="up2" type="TouchScreenButton" parent="."]
+position = Vector2(1681, 725)
+scale = Vector2(2.39286, 2.16667)
+texture_normal = ExtResource("2_3266n")
+action = "up"
+visibility_mode = 1
+
+[node name="down" type="TouchScreenButton" parent="."]
+position = Vector2(1684, 885)
+scale = Vector2(2.39285, 2.2381)
+texture_normal = ExtResource("3_fo3v6")
+action = "down"
+visibility_mode = 1
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2(50, 866)
+scale = Vector2(2.66667, 2.3871)
+texture_normal = ExtResource("4_w6whb")
+action = "left"
+visibility_mode = 1
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2(212, 864)
+scale = Vector2(2.51283, 2.41936)
+texture_normal = ExtResource("5_8qt1h")
+action = "right"
+visibility_mode = 1
+
+[node name="FoodLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = -1.0
+offset_right = 230.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("6_muxhc")
+theme_override_font_sizes/font_size = 64
+text = "Еда: "
+
+[node name="FoodLabelUpdateTimer" type="Timer" parent="FoodLabel"]
+wait_time = 0.25
+
+[node name="LevelCompleteLabel" type="Label" parent="."]
+offset_left = -1.0
+offset_top = 483.0
+offset_right = 1922.0
+offset_bottom = 726.0
+theme_override_fonts/font = ExtResource("6_muxhc")
+theme_override_font_sizes/font_size = 64
+text = "Кажется происходит что-то странное"
+horizontal_alignment = 1
+
+[node name="HideButton" type="Button" parent="."]
+offset_left = 672.0
+offset_top = 726.0
+offset_right = 1196.0
+offset_bottom = 825.0
+theme_override_fonts/font = ExtResource("6_muxhc")
+theme_override_font_sizes/font_size = 36
+text = "Ок"
+
+[node name="exed" parent="." instance=ExtResource("7_680lt")]
+script = ExtResource("8_8mgnu")
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_4codh")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 786.0
+offset_top = 52.0
+offset_right = 1094.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("6_muxhc")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+
+[connection signal="timeout" from="FoodLabel/FoodLabelUpdateTimer" to="." method="_on_food_label_update_timer_timeout"]
+[connection signal="pressed" from="HideButton" to="." method="_on_hide_button_pressed"]

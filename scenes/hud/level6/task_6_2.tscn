@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://peig6qx4hm48"]
+[gd_scene load_steps=4 format=3 uid="uid://peig6qx4hm48"]
 
 [ext_resource type="Script" path="res://scenes/hud/level6/task_6_2.gd" id="1_2oq3j"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_dcy0u"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="3_5fqi1"]
 
 [node name="Task1" type="CanvasLayer"]
 script = ExtResource("1_2oq3j")
@@ -49,5 +50,8 @@ offset_bottom = 812.0
 theme_override_fonts/font = ExtResource("2_dcy0u")
 theme_override_font_sizes/font_size = 35
 text = "идти дальше"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5fqi1")
 
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

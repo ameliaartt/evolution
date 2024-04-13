@@ -113,8 +113,6 @@ position = Vector2(1432, 3984)
 [node name="Food20" parent="Foods" instance=ExtResource("3_wt566")]
 position = Vector2(2390, 3941)
 
-[node name="HUD" parent="." instance=ExtResource("5_kkorm")]
-
 [node name="ExitArea" type="Area2D" parent="."]
 position = Vector2(4260, 2180)
 collision_mask = 2
@@ -156,5 +154,7 @@ position = Vector2(3195, 3528)
 
 [node name="Node2D11" parent="." instance=ExtResource("8_niuen")]
 position = Vector2(1837, 3017)
+
+[node name="HUD" parent="." instance=ExtResource("5_kkorm")]
 
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]

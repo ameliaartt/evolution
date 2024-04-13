@@ -30,6 +30,8 @@ func show_task():
 		$Label2.text = Tasks.task2_2_lvl6
 
 func _on_button_pressed():
+	$button.play()
+	await $button.finished
 	if num_num == 1:
 		$Label.set("visible_characters", 0)
 		$Label2.set("visible_characters", 0)
@@ -42,6 +44,8 @@ func _on_button_pressed():
 	pass # Replace with function body.
 
 func _on_button_2_pressed():
+	$button.play()
+	await $button.finished
 	if num_num == 3:
 		$Label.set("visible_characters", 0)
 		$Label2.set("visible_characters", 0)
@@ -55,6 +59,8 @@ func _on_button_2_pressed():
 
 
 func _on_button_3_pressed():
+	$button.play()
+	await $button.finished
 	if num_num == 2:
 		$Label.set("visible_characters", 0)
 		$Label2.set("visible_characters", 0)

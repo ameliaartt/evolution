@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bysms550jton4"]
+[gd_scene load_steps=24 format=3 uid="uid://bysms550jton4"]
 
 [ext_resource type="Texture2D" uid="uid://d3wpbjhq33gew" path="res://assets/tiles/level_2/photo_2024-02-04_18-58-29.jpg" id="1_0i2me"]
 [ext_resource type="Texture2D" uid="uid://brlcmm10k7mow" path="res://assets/tiles/level_2/photo_2024-02-04_18-58-27.jpg" id="1_mumyu"]
@@ -7,8 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cm0hvrqdek6gr" path="res://assets/tiles/level_2/photo_2024-02-04_18-58-28.jpg" id="3_xskt4"]
 [ext_resource type="PackedScene" uid="uid://diswrr0tyxn47" path="res://scenes/levels/level8/animal_8_2.tscn" id="5_c365b"]
 [ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/tiles/rock.png" id="5_luexv"]
-[ext_resource type="PackedScene" uid="uid://cyiiqaihpcg35" path="res://scenes/hud/level8/hud8_2.tscn" id="5_tligm"]
+[ext_resource type="PackedScene" uid="uid://b0dqgdwec8gxv" path="res://scenes/hud/level2/hud.tscn" id="7_s16xx"]
 [ext_resource type="PackedScene" uid="uid://c4ovq13ygc0xc" path="res://scenes/hud/level8/task_8.tscn" id="8_7nm2a"]
+[ext_resource type="Script" path="res://scenes/hud/level8/hud8_2.gd" id="8_siu7b"]
 [ext_resource type="Script" path="res://scenes/hud/level8/task_8_2.gd" id="9_eer0i"]
 [ext_resource type="Script" path="res://scenes/hud/level8/task_8_3.gd" id="10_nybii"]
 [ext_resource type="Script" path="res://scenes/hud/level8/task_8_4.gd" id="11_7bejk"]
@@ -149,7 +150,8 @@ position = Vector2(2657, 3978)
 [node name="Food2" parent="Foods" instance=ExtResource("3_rcw1n")]
 position = Vector2(1950, 1058)
 
-[node name="HUD" parent="." instance=ExtResource("5_tligm")]
+[node name="HUD" parent="." instance=ExtResource("7_s16xx")]
+script = ExtResource("8_siu7b")
 
 [node name="Task1" parent="." instance=ExtResource("8_7nm2a")]
 

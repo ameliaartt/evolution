@@ -2,6 +2,8 @@ extends Control
 
 
 func _on_button_pressed():
+	$button.play()
+	await $button.finished
 	if Tasks.food_2 >= 10:
 		get_tree().change_scene_to_file("res://scenes/levels/level3/cat_scene_5.tscn")
 	if Tasks.food_2 < 10:

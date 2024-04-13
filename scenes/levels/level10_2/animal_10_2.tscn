@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxni5k1segup4"]
+
+[ext_resource type="Script" path="res://scenes/levels/level8/animal_8_1.gd" id="1_au4sq"]
+[ext_resource type="Texture2D" uid="uid://cdux8dvsvov2u" path="res://assets/sprites/animals/animal10_2.png" id="2_0vea1"]
+[ext_resource type="Texture2D" uid="uid://bu5qegobqyxi8" path="res://assets/sprites/animals/animal10_2_2.png" id="3_mwryv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v00c2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0vea1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mwryv")
+}],
+"loop": true,
+"name": &"go",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0vea1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mwryv")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hbua5"]
+radius = 10.25
+height = 41.0
+
+[node name="animal9" type="CharacterBody2D"]
+scale = Vector2(4, 4)
+collision_layer = 2
+script = ExtResource("1_au4sq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.64063, -3.17188)
+scale = Vector2(0.200317, 0.180298)
+sprite_frames = SubResource("SpriteFrames_v00c2")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.75, -3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_hbua5")

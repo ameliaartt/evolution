@@ -28,6 +28,16 @@ func _ready():
 	else:
 		$ColorRect19.visible = true	
 
+	if Tasks.level10_1 == 1:
+		$ColorRect23.visible = false
+	else:
+		$ColorRect23.visible = true	
+
+	if Tasks.level10_2 == 1:
+		$ColorRect20.visible = false
+	else:
+		$ColorRect20.visible = true	
+
 	pass # Replace with function body.
 
 
@@ -37,5 +47,7 @@ func _process(delta):
 
 
 func _on_button_2_pressed():
+	$button.play()
+	await $button.finished
 	get_tree().change_scene_to_file("res://scenes/levels/main_menu/achive.tscn")
 	pass # Replace with function body.

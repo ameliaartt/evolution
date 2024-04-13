@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://5bvxemlwpwn0"]
+[gd_scene load_steps=11 format=3 uid="uid://5bvxemlwpwn0"]
 
 [ext_resource type="Texture2D" uid="uid://duwirlbqfm7oq" path="res://assets/sprites/animals/animal1.png" id="1_65plv"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_81651"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c0trpfegatk4o" path="res://assets/sprites/animals/animal4.png" id="6_3uc8s"]
 [ext_resource type="Texture2D" uid="uid://bdywlq1mkacof" path="res://assets/sprites/animals/animal5.png" id="7_02nl2"]
 [ext_resource type="Texture2D" uid="uid://di14figqblymv" path="res://assets/sprites/animals/animal6_1.png" id="8_usnr0"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="11_7l6un"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -41,12 +42,14 @@ offset_bottom = 512.0
 color = Color(0.145098, 0.380392, 0.298039, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 1408.0
 offset_top = 64.0
 offset_right = 1856.0
 offset_bottom = 448.0
 
 [node name="ColorRect5" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 1408.0
 offset_top = 408.0
 offset_right = 1856.0
@@ -54,18 +57,21 @@ offset_bottom = 512.0
 color = Color(0.145098, 0.380392, 0.298039, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 512.0
 offset_top = 64.0
 offset_right = 896.0
 offset_bottom = 448.0
 
 [node name="ColorRect7" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 960.0
 offset_top = 64.0
 offset_right = 1344.0
 offset_bottom = 448.0
 
 [node name="ColorRect8" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 512.0
 offset_top = 408.0
 offset_right = 896.0
@@ -73,6 +79,7 @@ offset_bottom = 512.0
 color = Color(0.145098, 0.380392, 0.298039, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 960.0
 offset_top = 408.0
 offset_right = 1344.0
@@ -80,12 +87,14 @@ offset_bottom = 512.0
 color = Color(0.145098, 0.380392, 0.298039, 1)
 
 [node name="ColorRect10" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 576.0
 offset_right = 448.0
 offset_bottom = 960.0
 
 [node name="ColorRect11" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 920.0
 offset_right = 448.0
@@ -93,12 +102,14 @@ offset_bottom = 1024.0
 color = Color(0.145098, 0.380392, 0.298039, 1)
 
 [node name="ColorRect12" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 512.0
 offset_top = 576.0
 offset_right = 896.0
 offset_bottom = 960.0
 
 [node name="ColorRect13" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 512.0
 offset_top = 920.0
 offset_right = 896.0
@@ -106,12 +117,14 @@ offset_bottom = 1024.0
 color = Color(0.145098, 0.380392, 0.298039, 1)
 
 [node name="ColorRect14" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 960.0
 offset_top = 576.0
 offset_right = 1344.0
 offset_bottom = 960.0
 
 [node name="ColorRect15" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 960.0
 offset_top = 920.0
 offset_right = 1344.0
@@ -129,6 +142,7 @@ theme_override_font_sizes/font_size = 50
 text = "Дальше"
 
 [node name="Button2" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1408.0
 offset_top = 848.0
 offset_right = 1856.0
@@ -184,6 +198,7 @@ theme_override_font_sizes/font_size = 40
 text = "Дикинсонии"
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 618.0
 offset_top = 432.0
 offset_right = 900.0
@@ -193,6 +208,7 @@ theme_override_font_sizes/font_size = 40
 text = "Пикайя"
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1015.0
 offset_top = 433.0
 offset_right = 1297.0
@@ -202,6 +218,7 @@ theme_override_font_sizes/font_size = 40
 text = "Хайкоуихтис"
 
 [node name="Label4" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1518.0
 offset_top = 433.0
 offset_right = 1800.0
@@ -211,6 +228,7 @@ theme_override_font_sizes/font_size = 40
 text = "Конодонта"
 
 [node name="Label5" type="Label" parent="."]
+layout_mode = 0
 offset_left = 155.0
 offset_top = 946.0
 offset_right = 437.0
@@ -220,6 +238,7 @@ theme_override_font_sizes/font_size = 40
 text = "Акантода"
 
 [node name="Label6" type="Label" parent="."]
+layout_mode = 0
 offset_left = 609.0
 offset_top = 946.0
 offset_right = 891.0
@@ -229,6 +248,7 @@ theme_override_font_sizes/font_size = 40
 text = "Трилобит"
 
 [node name="Label7" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1047.0
 offset_top = 946.0
 offset_right = 1329.0
@@ -246,6 +266,7 @@ offset_bottom = 512.0
 color = Color(0.372549, 0.505882, 0.380392, 1)
 
 [node name="ColorRect17" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 960.0
 offset_top = 576.0
 offset_right = 1345.0
@@ -253,6 +274,7 @@ offset_bottom = 1026.0
 color = Color(0.372549, 0.505882, 0.380392, 1)
 
 [node name="ColorRect18" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 960.0
 offset_top = 64.0
 offset_right = 1345.0
@@ -260,6 +282,7 @@ offset_bottom = 514.0
 color = Color(0.372549, 0.505882, 0.380392, 1)
 
 [node name="ColorRect19" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 576.0
 offset_right = 449.0
@@ -267,6 +290,7 @@ offset_bottom = 1026.0
 color = Color(0.372549, 0.505882, 0.380392, 1)
 
 [node name="ColorRect21" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 511.0
 offset_top = 62.0
 offset_right = 896.0
@@ -274,6 +298,7 @@ offset_bottom = 512.0
 color = Color(0.372549, 0.505882, 0.380392, 1)
 
 [node name="ColorRect20" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 512.0
 offset_top = 576.0
 offset_right = 897.0
@@ -281,11 +306,15 @@ offset_bottom = 1026.0
 color = Color(0.372549, 0.505882, 0.380392, 1)
 
 [node name="ColorRect22" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 1408.0
 offset_top = 64.0
 offset_right = 1856.0
 offset_bottom = 512.0
 color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_7l6un")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

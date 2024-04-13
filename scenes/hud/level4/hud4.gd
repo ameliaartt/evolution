@@ -17,6 +17,7 @@ func _on_food_label_update_timer_timeout():
 func _ready():
 	$LevelCompleteLabel.set("visible_characters", 0)
 	$HideButton.visible = false
+	$Label.text = "Уровень 4"
 	
 func show_level_complete_hud(food_count):
 	$LevelCompleteLabel.set("visible_characters", -1)
@@ -25,6 +26,8 @@ func show_level_complete_hud(food_count):
 Счёт: " + str(food_count)
 
 func _on_hide_button_pressed():
+	$button.play()
+	await $button.finished
 	if Tasks.level < 5:
 		Tasks.level = 5
 	Tasks.level4 = 1

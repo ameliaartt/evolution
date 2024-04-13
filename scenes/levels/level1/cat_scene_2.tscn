@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpmygkp6a18oo"]
+[gd_scene load_steps=5 format=3 uid="uid://dpmygkp6a18oo"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/cat_scene_2.gd" id="1_6j8ja"]
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_b2mqp"]
 [ext_resource type="Texture2D" uid="uid://5gdq1u87x67k" path="res://assets/sprites/catscene/old_creature_diet_7-750x499.jpg" id="2_w3ob7"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="4_db0ni"]
 
 [node name="cat_scene2" type="Control"]
 layout_mode = 3
@@ -47,8 +48,6 @@ size_flags_vertical = 6
 
 [node name="Label" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("1_b2mqp")
 theme_override_font_sizes/font_size = 64
 text = "Эдиакарская биота"
@@ -56,8 +55,6 @@ text = "Эдиакарская биота"
 [node name="Label2" type="Label" parent="MarginContainer/GridContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("1_b2mqp")
 theme_override_font_sizes/font_size = 36
 text = "Все эдиакарские живые существа обитали в море, суша ещё оставалась безжизненной. Большинство из них резко отличаются ото всех других ныне известных живых существ и представляют собой мягкотелые, в основном сидячие организмы, имеющие трубчатую структуру. Эдиакарские организмы представляют собой первую достоверно подтверждённую фауну многоклеточных животных "
@@ -78,5 +75,8 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_b2mqp")
 theme_override_font_sizes/font_size = 48
 text = "На следующий уровень"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_db0ni")
 
 [connection signal="pressed" from="MarginContainer/GridContainer/VBoxContainer2/Button" to="." method="_on_button_pressed"]

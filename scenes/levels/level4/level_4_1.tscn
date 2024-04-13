@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://em7hby5cfl6m"]
+[gd_scene load_steps=22 format=3 uid="uid://em7hby5cfl6m"]
 
 [ext_resource type="Script" path="res://scenes/levels/level4/level_4_1.gd" id="1_jcylb"]
 [ext_resource type="Texture2D" uid="uid://b1tan5h5y52j7" path="res://assets/tiles/level_2/tile.png" id="2_dsot6"]
@@ -8,9 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/tiles/rock.png" id="6_eydce"]
 [ext_resource type="PackedScene" uid="uid://d07uhwbcgryui" path="res://scenes/hud/level4/task_4_1.tscn" id="6_k8o4e"]
 [ext_resource type="Script" path="res://scenes/hud/level4/task_4_2.gd" id="7_18brj"]
-[ext_resource type="PackedScene" uid="uid://cnbaamukc8j1q" path="res://scenes/hud/level4/hud4.tscn" id="7_rh18r"]
 [ext_resource type="Script" path="res://scenes/hud/level4/task_4_3.gd" id="8_7ps8j"]
 [ext_resource type="Script" path="res://scenes/hud/level4/task_4_4.gd" id="9_pgx1l"]
+[ext_resource type="PackedScene" uid="uid://b0dqgdwec8gxv" path="res://scenes/hud/level2/hud.tscn" id="10_cdvah"]
+[ext_resource type="Script" path="res://scenes/hud/level4/hud4.gd" id="11_goamx"]
 [ext_resource type="PackedScene" uid="uid://ccuaffq3i06s2" path="res://scenes/objects/listva.tscn" id="12_b2d6r"]
 [ext_resource type="PackedScene" uid="uid://d1l05slocvdum" path="res://scenes/objects/listva2.tscn" id="13_exhep"]
 [ext_resource type="PackedScene" uid="uid://dk5hxe4xehsvq" path="res://scenes/objects/miduza.tscn" id="14_w0ety"]
@@ -145,7 +146,8 @@ script = ExtResource("8_7ps8j")
 [node name="Task4" parent="." instance=ExtResource("6_k8o4e")]
 script = ExtResource("9_pgx1l")
 
-[node name="HUD" parent="." instance=ExtResource("7_rh18r")]
+[node name="HUD" parent="." instance=ExtResource("10_cdvah")]
+script = ExtResource("11_goamx")
 
 [node name="ExitArea" type="Area2D" parent="."]
 position = Vector2(4260, 2180)

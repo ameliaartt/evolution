@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://deb2o1ardtjoe"]
+[gd_scene load_steps=11 format=3 uid="uid://deb2o1ardtjoe"]
 
 [ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="1_51gpp"]
 [ext_resource type="Script" path="res://scenes/levels/main_menu/achive2.gd" id="1_c3xvd"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://b8guxahvege87" path="res://assets/sprites/animals/animal8_1.png" id="4_uk8pu"]
 [ext_resource type="Texture2D" uid="uid://bwna48n42g4te" path="res://assets/sprites/animals/animal8_2.png" id="5_rv3ky"]
 [ext_resource type="Texture2D" uid="uid://cg8e2y6ufkm1k" path="res://assets/sprites/animals/animal9.png" id="6_c8bfo"]
+[ext_resource type="Texture2D" uid="uid://da2jxxe42jvb5" path="res://assets/sprites/animals/animal10_1.png" id="9_a6utb"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="9_yto85"]
+[ext_resource type="Texture2D" uid="uid://cdux8dvsvov2u" path="res://assets/sprites/animals/animal10_2.png" id="10_0tgn5"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -39,12 +42,14 @@ offset_bottom = 512.0
 color = Color(0.145098, 0.380392, 0.298039, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 1408.0
 offset_top = 64.0
 offset_right = 1856.0
 offset_bottom = 448.0
 
 [node name="ColorRect5" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 1408.0
 offset_top = 408.0
 offset_right = 1856.0
@@ -52,18 +57,21 @@ offset_bottom = 512.0
 color = Color(0.145098, 0.380392, 0.298039, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 512.0
 offset_top = 64.0
 offset_right = 896.0
 offset_bottom = 448.0
 
 [node name="ColorRect7" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 960.0
 offset_top = 64.0
 offset_right = 1344.0
 offset_bottom = 448.0
 
 [node name="ColorRect8" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 512.0
 offset_top = 408.0
 offset_right = 896.0
@@ -71,6 +79,7 @@ offset_bottom = 512.0
 color = Color(0.145098, 0.380392, 0.298039, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 960.0
 offset_top = 408.0
 offset_right = 1344.0
@@ -78,12 +87,14 @@ offset_bottom = 512.0
 color = Color(0.145098, 0.380392, 0.298039, 1)
 
 [node name="ColorRect10" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 576.0
 offset_right = 448.0
 offset_bottom = 960.0
 
 [node name="ColorRect11" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 920.0
 offset_right = 448.0
@@ -91,9 +102,10 @@ offset_bottom = 1024.0
 color = Color(0.145098, 0.380392, 0.298039, 1)
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 512.0
+layout_mode = 0
+offset_left = 1408.0
 offset_top = 896.0
-offset_right = 960.0
+offset_right = 1856.0
 offset_bottom = 1024.0
 theme_override_fonts/font = ExtResource("1_51gpp")
 theme_override_font_sizes/font_size = 35
@@ -135,6 +147,7 @@ theme_override_font_sizes/font_size = 40
 text = "Меганевр"
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 593.0
 offset_top = 434.0
 offset_right = 875.0
@@ -144,6 +157,7 @@ theme_override_font_sizes/font_size = 40
 text = "Листозавр"
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1047.0
 offset_top = 433.0
 offset_right = 1329.0
@@ -153,6 +167,7 @@ theme_override_font_sizes/font_size = 40
 text = "Эораптор"
 
 [node name="Label4" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1501.0
 offset_top = 431.0
 offset_right = 1783.0
@@ -162,6 +177,7 @@ theme_override_font_sizes/font_size = 40
 text = "Диногоргон"
 
 [node name="Label5" type="Label" parent="."]
+layout_mode = 0
 offset_left = 128.0
 offset_top = 943.0
 offset_right = 410.0
@@ -179,6 +195,7 @@ offset_bottom = 512.0
 color = Color(0.372549, 0.505882, 0.380392, 1)
 
 [node name="ColorRect18" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 960.0
 offset_top = 64.0
 offset_right = 1345.0
@@ -186,6 +203,7 @@ offset_bottom = 514.0
 color = Color(0.372549, 0.505882, 0.380392, 1)
 
 [node name="ColorRect19" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 576.0
 offset_right = 449.0
@@ -193,6 +211,7 @@ offset_bottom = 1026.0
 color = Color(0.372549, 0.505882, 0.380392, 1)
 
 [node name="ColorRect21" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 511.0
 offset_top = 62.0
 offset_right = 896.0
@@ -200,10 +219,82 @@ offset_bottom = 512.0
 color = Color(0.372549, 0.505882, 0.380392, 1)
 
 [node name="ColorRect22" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 1408.0
 offset_top = 64.0
 offset_right = 1856.0
 offset_bottom = 512.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_yto85")
+
+[node name="ColorRect15" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 576.0
+offset_right = 1344.0
+offset_bottom = 960.0
+
+[node name="ColorRect14" type="ColorRect" parent="."]
+offset_left = 512.0
+offset_top = 576.0
+offset_right = 896.0
+offset_bottom = 960.0
+
+[node name="ColorRect13" type="ColorRect" parent="."]
+offset_left = 512.0
+offset_top = 920.0
+offset_right = 896.0
+offset_bottom = 1024.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 920.0
+offset_right = 1344.0
+offset_bottom = 1024.0
+color = Color(0.145098, 0.380392, 0.298039, 1)
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(720, 760)
+scale = Vector2(1.32812, 1.27539)
+texture = ExtResource("9_a6utb")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(1152, 752)
+scale = Vector2(1.32812, 1.27539)
+texture = ExtResource("10_0tgn5")
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 560.0
+offset_top = 936.0
+offset_right = 842.0
+offset_bottom = 1018.0
+theme_override_fonts/font = ExtResource("1_51gpp")
+theme_override_font_sizes/font_size = 40
+text = "Трицератопс"
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 1016.0
+offset_top = 936.0
+offset_right = 1298.0
+offset_bottom = 1018.0
+theme_override_fonts/font = ExtResource("1_51gpp")
+theme_override_font_sizes/font_size = 40
+text = "Пургаториус"
+
+[node name="ColorRect20" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 576.0
+offset_right = 1345.0
+offset_bottom = 1026.0
+color = Color(0.372549, 0.505882, 0.380392, 1)
+
+[node name="ColorRect23" type="ColorRect" parent="."]
+offset_left = 512.0
+offset_top = 576.0
+offset_right = 897.0
+offset_bottom = 1026.0
 color = Color(0.372549, 0.505882, 0.380392, 1)
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://csb76hqfibqvn"]
+[gd_scene load_steps=15 format=3 uid="uid://csb76hqfibqvn"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/level_3_1.gd" id="1_f82mu"]
 [ext_resource type="Texture2D" uid="uid://b1tan5h5y52j7" path="res://assets/tiles/level_2/tile.png" id="2_r7vg8"]
 [ext_resource type="PackedScene" uid="uid://2ojgicxc8udc" path="res://scenes/levels/level3/fish.tscn" id="3_b1ev0"]
 [ext_resource type="PackedScene" uid="uid://bxwboaoquym2d" path="res://scenes/levels/level1/food.tscn" id="4_2jg7m"]
-[ext_resource type="PackedScene" uid="uid://c0qahj5yt1c2p" path="res://scenes/hud/level3/hud.tscn" id="5_srb81"]
+[ext_resource type="PackedScene" uid="uid://b0dqgdwec8gxv" path="res://scenes/hud/level2/hud.tscn" id="6_5064b"]
 [ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/tiles/rock.png" id="6_pueto"]
 [ext_resource type="PackedScene" uid="uid://cfqu8cnun1k70" path="res://scenes/hud/level3/task_1.tscn" id="6_scjwj"]
+[ext_resource type="Script" path="res://scenes/hud/level3/hud.gd" id="7_gv58x"]
 [ext_resource type="PackedScene" uid="uid://d1l05slocvdum" path="res://scenes/objects/listva2.tscn" id="8_suhvw"]
 [ext_resource type="PackedScene" uid="uid://ccuaffq3i06s2" path="res://scenes/objects/listva.tscn" id="9_cxxxh"]
 
@@ -119,7 +120,8 @@ position = Vector2(2153, 1674)
 
 [node name="Task1" parent="." instance=ExtResource("6_scjwj")]
 
-[node name="HUD" parent="." instance=ExtResource("5_srb81")]
+[node name="HUD" parent="." instance=ExtResource("6_5064b")]
+script = ExtResource("7_gv58x")
 
 [node name="ExitArea" type="Area2D" parent="."]
 position = Vector2(4260, 2180)
