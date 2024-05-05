@@ -4,12 +4,12 @@ extends Control
 func _ready():
 	if Tasks.music == 0:
 		Global.menu.play()
-		Tasks.music == 1
+		Tasks.music = 1
 
 	if Tasks.music == 2:
 		Global.levels.stop()
 		Global.menu.play()
-		Tasks.music == 1
+		Tasks.music = 1
 		
 	if Tasks.level9 == 0:
 		$Label.text = str("???")
@@ -59,4 +59,11 @@ func _on_secret_button_pressed():
 			get_tree().change_scene_to_file("res://scenes/levels/level10_1/level_10.tscn")
 		Global.menu.stop()
 		Global.level10.play()
+	pass # Replace with function body.
+
+
+func _on_settings_pressed():
+	$button.play()
+	await $button.finished
+	get_tree().change_scene_to_file("res://scenes/levels/main_menu/settings.tscn")
 	pass # Replace with function body.

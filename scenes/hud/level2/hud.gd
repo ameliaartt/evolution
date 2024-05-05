@@ -22,7 +22,8 @@ func _ready():
 func show_level_complete_hud(food_count):
 	$LevelCompleteLabel.set("visible_characters", -1)
 	$HideButton.visible = true
-	$LevelCompleteLabel.text = "Вы выполнили задание.
+	$LevelCompleteLabel.text = "Вы хотите завершить уровень? 
+(желательно набрать больше 10)
 Счёт: " + str(food_count)
 
 func _on_hide_button_pressed():

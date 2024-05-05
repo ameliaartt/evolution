@@ -59,7 +59,8 @@ offset_right = 1922.0
 offset_bottom = 458.0
 theme_override_fonts/font = ExtResource("2_sn6k4")
 theme_override_font_sizes/font_size = 64
-text = "Вы выполнили задание.
+text = "Вы хотите завершить уровень? 
+(желательно набрать больше 10)
 Счёт: "
 horizontal_alignment = 1
 

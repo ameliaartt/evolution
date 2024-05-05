@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0pq2dv1wg0jo"]
 
 [ext_resource type="Script" path="res://scenes/levels/level1/rock.gd" id="1_ggcol"]
-[ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/sprites/rock/rock.png" id="1_yfjsu"]
+[ext_resource type="Texture2D" uid="uid://bbu5bcqigdqtg" path="res://assets/tiles/rock.png" id="1_yfjsu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ahr3"]
 size = Vector2(823.625, 566.75)

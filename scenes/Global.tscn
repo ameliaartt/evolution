@@ -11,11 +11,11 @@ script = ExtResource("1_w2x4b")
 
 [node name="levels" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_vs2kt")
-volume_db = -25.0
+volume_db = -25.658
 
 [node name="menu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_5limk")
-volume_db = -23.0
+volume_db = -21.91
 
 [node name="metior" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_sxvae")

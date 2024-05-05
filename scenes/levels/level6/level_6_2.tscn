@@ -298,6 +298,7 @@ position = Vector2(2720, 2984)
 position = Vector2(1844, 3987)
 
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
+[connection signal="body_exited" from="ExitArea" to="." method="_on_exit_area_body_exited"]
 [connection signal="body_entered" from="TestArea" to="." method="_on_test_area_body_entered"]
 [connection signal="body_entered" from="TestArea2" to="." method="_on_test_area_2_body_entered"]
 [connection signal="body_entered" from="TestArea3" to="." method="_on_test_area_3_body_entered"]

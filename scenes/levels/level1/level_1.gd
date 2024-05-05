@@ -46,5 +46,3 @@ func spawn_food():
 
 func _ready():
 	spawn_food()
-
-

@@ -38,3 +38,4 @@ func _on_test_area_body_entered(body):
 		show_task()
 	count += 1
 	pass # Replace with function body.
+

@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3ce7vkku8plf"]
+
+[ext_resource type="Script" path="res://scenes/levels/main_menu/settings.gd" id="1_ujort"]
+[ext_resource type="FontFile" uid="uid://c15qulsl5wbmb" path="res://assets/fonts/RussoOne-Regular.ttf" id="2_y7wxs"]
+[ext_resource type="AudioStream" uid="uid://b0ghbd4vvruhh" path="res://music/najatie-na-kompyuternuyu-knopku1.mp3" id="3_gjyie"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ujort")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.447059, 0.682353, 0.380392, 1)
+
+[node name="HScrollBar" type="HScrollBar" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 331.0
+offset_right = 746.0
+offset_bottom = 491.0
+min_value = -46.0
+max_value = 20.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 46.0
+offset_top = -284.0
+offset_right = 594.0
+offset_bottom = -216.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_y7wxs")
+theme_override_font_sizes/font_size = 56
+text = "Громкость музыки"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -274.0
+offset_right = 274.0
+offset_bottom = 68.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_y7wxs")
+theme_override_font_sizes/font_size = 72
+text = "Настройки"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -218.0
+offset_top = -189.0
+offset_right = 234.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_y7wxs")
+theme_override_font_sizes/font_size = 36
+text = "Обратно в меню"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gjyie")
+
+[connection signal="value_changed" from="HScrollBar" to="." method="_on_h_scroll_bar_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
